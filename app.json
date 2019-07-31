@@ -1,13 +1,49 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/company/index",
+    "pages/buy/index",
+    "pages/sell/index",
+    "pages/self/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a8b4c8",
+    "selectedColor": "#008fff",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/company/index",
+        "text": "企业",
+        "iconPath": "./img/tabar/company.png",
+        "selectedIconPath": "./img/tabar/companyselect.png"
+      },
+      {
+        "pagePath": "pages/buy/index",
+        "text": "收购",
+        "iconPath": "img/tabar/buy.png",
+        "selectedIconPath": "img/tabar/buyselect.png"
+      },
+      {
+        "pagePath": "pages/sell/index",
+        "text": "出售",
+        "iconPath": "img/tabar/sell.png",
+        "selectedIconPath": "img/tabar/sellSelect.png"
+      },
+      {
+        "pagePath": "pages/self/index",
+        "text": "个人",
+        "iconPath": "img/tabar/self.png",
+        "selectedIconPath": "img/tabar/selfSelect.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
