@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/first/index",
+    "pages/regist/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/company/index",

@@ -1,0 +1,14 @@
+<view class='con'>
+  <image src='../../img/icons/bg.jpg' mode='widthFix' class='bg'></image>
+  <view class='con-body'>
+    <image src='../../img/icons/logoText.png' class='logo'></image>
+    <view class='column'>
+      <image src='../../img/icons/column1.png' class='column1' mode='widthFix'></image>
+      <image src='../../img/icons/column2.png' class='column2' mode='widthFix'></image>
+    </view>
+    <view class='registCon'>
+      <image src='../../img/icons/registText.png' class='regist' mode='widthFix' bindtap='gotoRegist'></image>
+    </view>
+    <image src='../../img/icons/concatText.png' class='concat' mode='widthFix'></image>
+  </view>
+</view>
