@@ -1,0 +1,12 @@
+<view class='con'>
+  <text class='title'>身份证认证</text>
+  <view class='con-body'>
+    <view class='row'>
+      <text>姓名：</text>
+      <input  type="text" maxlength='11' placeholder='请输入您的姓名' />
+    </view>
+    <view class='rowtext'>身份证照片</view> 
+    <view class='upload' bindtap='upload'>+</view>
+    <button class='btn'>提交信息</button>   
+  </view>
+</view>

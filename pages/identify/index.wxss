@@ -1,3 +1,4 @@
+/* pages/identify/index.wxss */
 /* pages/regist/index.wxss */
 .con{
   padding: 0 20rpx;
@@ -20,24 +21,29 @@
   flex: 1;
   margin-left: 10rpx;
 }
-.getcode{
-  width: 250rpx;
-  height: 70rpx;
+.rowtext{
   line-height: 70rpx;
-  background: #f4f5f6;
-  text-align: center;
   font-size: 36rpx;
 }
-.text-center{
+.upload{
+  margin-top: 20rpxe;
+  width: 200rpx;
+  height: 200rpx;
+  background: #f4f5f6;
   text-align: center;
+  font-size: 70rpx;
+  /* font-weight: 700; */
+  line-height: 200rpx;
+  color: #ccc;
 }
-.logotext{
-  width: 456rpx;
-  height: 60rpx;
-  margin-top: 78rpx;
-}
-.next{
-  width: 96rpx;
+.btn{
+  width: 300rpx;
   height: 80rpx;
-  margin-top: 60rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin: auto;
+  margin-top: 170px;
+  background: #f85959;
+  color: #fff;
+
 }
