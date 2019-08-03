@@ -1,6 +1,0 @@
-<view class='con'>
-  <view class="list">
-    <text>企业营业执照认证</text>
-    <image src='../../img/icons/arrow_left' alt='箭头'></image>
-  </view>
-</view>

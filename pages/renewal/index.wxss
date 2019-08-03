@@ -1,0 +1,87 @@
+/* pages/renewal/index.wxss */
+
+.con {
+}
+
+.item-list {
+  display: flex;
+}
+
+.item-info {
+  font-size: 36rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #222;
+}
+
+.item {
+  padding: 24rpx;
+}
+
+.card {
+  text-align: center;
+  height: 160rpx;
+  width: 200rpx;
+  margin: 24rpx;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #a0a0a0;
+  border-radius: 20rpx;
+}
+.active {
+border: 2px solid #f85959;
+background-color: #FFD0D2;
+}
+
+.text-month {
+  font-size: 32rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #222;
+}
+
+.text-money-flag {
+  font-size: 36rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #f85959;
+}
+
+.text-money {
+  font-size: 60rpx;
+  font-weight: normal;
+  letter-spacing: 0rpx;
+  color: #f85959;
+}
+
+.text-info {
+  font-size: 24rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #a0a0a0;
+}
+.pay-list {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.pay-icon {
+  width: 64rpx;
+  height: 64rpx;
+}
+.pay-text {
+  font-size: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222;
+}
+.btn-pay {
+  letter-spacing: 5rpx;
+  margin-top: 150rpx;
+}

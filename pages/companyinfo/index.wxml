@@ -1,0 +1,18 @@
+<!--pages/companyinfo/index.wxml-->
+<view class="con">
+  <view class="card">
+    <image class="img" src='../../img/icons/card.jpg'></image>
+    <view class="info-card">
+      <view class="company-name">河南省XXX有限责任公司</view>
+      <view class="user-name">张先生</view>
+      <view class="user-phone">电话：13333333333</view>
+      <view class="user-email">邮箱：123456789@qq.com</view>
+    </view>
+  </view>
+  <view class="info-list">
+    <view class="info-list-item">
+      <text class="label">公司类型</text>
+      <text class="text">生产厂家</text>
+    </view>
+  </view>
+</view>

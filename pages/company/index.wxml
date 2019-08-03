@@ -1,0 +1,13 @@
+<view class="con">
+  <view class="header">
+    <view class="search">
+      <image src='../../img/icons/search.png' alt='检索'></image>
+      <input placeholder="检索"></input>
+    </view>
+    <image src='../../img/icons/plus1.png' class="plus" alt='发布'></image>
+  </view>
+  <view class="scro-con">
+    <scroll-view scroll-x class="scroll">
+    </scroll-view>
+  </view>
+</view>

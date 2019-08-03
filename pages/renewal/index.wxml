@@ -1,0 +1,47 @@
+<!--pages/renewal/index.wxml-->
+<view class="con">
+  <view class="item">
+    <text class="item-info">浏览付费</text>
+    <view class="item-list">
+      <view class="card active">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+      <view class="card">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+      <view class="card">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+    </view>
+    <text class="item-info">顶置特权</text>
+    <view class="item-list">
+      <view class="card active">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+      <view class="card">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+      <view class="card">
+        <text class="text-month">1个月</text>
+        <text class="text-money"><text class="text-money-flag">¥ </text>5</text>
+        <text class="text-info">每月仅约4.2元</text>
+      </view>
+    </view>
+    <view class="pay-list">
+      <!-- <image class="pay-icon">微信图标</image> -->
+      <text class="pay-text">微信支付</text>
+      <radio checked></radio>
+    </view>
+  </view>
+  <button class="btn btn-pay">立即支付</button>
+</view>

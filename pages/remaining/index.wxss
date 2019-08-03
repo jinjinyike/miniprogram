@@ -1,0 +1,26 @@
+/* pages/remaining/index.wxss */
+.con {
+  text-align: center
+}
+.con-text {
+  margin-top: 350rpx
+}
+.smart-text {
+  text-align: center;
+	font-size: 48rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222
+}
+.num-text {
+  margin: 0 20rpx;
+  font-size: 72rpx;
+	font-weight: normal;
+	letter-spacing: 0rpx;
+	color: #d43d3d;
+}
+.btn-pay {
+  letter-spacing: 10rpx;
+  margin-top: 220rpx
+}

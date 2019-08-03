@@ -30,3 +30,7 @@
   width: 456rpx;
   height: 60rpx;
 }
+.continue-img{
+  width: 254rpx;
+  height: 252rpx;
+}

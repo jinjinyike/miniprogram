@@ -1,0 +1,15 @@
+<!--pages/overtime/index.wxml-->
+<!--pages/fail/index.wxml-->
+<import src='../../template/continue.wxml' />
+
+<view class="con">
+  <template is='continue' />
+  <view class='mtext'>
+    <view>您的使用时间已到期!
+    </view>
+    <view>请续费后继续使用!
+    </view>
+  </view>
+  <button class='btn'>续费使用</button>
+</view>
+

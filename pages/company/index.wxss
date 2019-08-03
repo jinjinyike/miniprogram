@@ -1,1 +1,33 @@
 /* pages/company/index.wxss */
+.header{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23rpx;
+  background: #d43d3d;
+}
+.search{
+  height: 65rpx;
+  background: #fff;
+  width: 630rpx;
+  border-radius: 10rpx;
+  padding: 0 0 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+.search input{
+  height: 65rpx;
+}
+.search image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10px;
+}
+.plus{
+  width: 38rpx;
+  height: 57rpx;
+}
+.scroll{
+  width: 670rpx;
+}

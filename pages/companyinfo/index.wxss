@@ -1,0 +1,63 @@
+/* pages/companyinfo/index.wxss */
+
+.con {
+  padding: 25rpx;
+}
+
+.card {
+  width: 700rpx;
+  height: 400rpx;
+  position: relative;
+}
+
+.img {
+  width: 700rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.info-card {
+  position: absolute;
+  top: 128rpx;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.company-name {
+  margin-left: 47rpx;
+  font-size: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222;
+}
+
+.user-name {
+  font-size: 48rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222;
+  text-align: center;
+}
+
+.user-phone {
+  margin-left: 300rpx;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222;
+}
+.user-email {
+  margin-left: 300rpx;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #222222;
+}

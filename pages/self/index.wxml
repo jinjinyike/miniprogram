@@ -1,0 +1,22 @@
+<view class='con'>
+  <view class="list">
+    <text>企业营业执照认证</text>
+    <image src='../../img/icons/arrow_left.png' alt='箭头'></image>
+  </view>
+  <view class="list">
+    <text>身份证认证</text>
+    <image src='../../img/icons/arrow_left.png' alt='箭头'></image>
+  </view>
+  <view class="list">
+    <text>历史发布</text>
+    <image src='../../img/icons/arrow_left.png' alt='箭头'></image>
+  </view>
+  <view class="list">
+    <text>期限剩余</text>
+    <image src='../../img/icons/arrow_left.png' alt='箭头'></image>
+  </view>
+  <view class="list">
+    <text>充值</text>
+    <image src='../../img/icons/arrow_left.png' alt='箭头'></image>
+  </view>
+</view>

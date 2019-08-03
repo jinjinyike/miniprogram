@@ -1,1 +1,17 @@
 /* pages/self/index.wxss */
+.con{
+  padding: 0 25rpx;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77rpx;
+  line-height: 77rpx;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 36rpx;
+}
+.list image{
+  width: 17rpx;
+  height: 30rpx;
+}

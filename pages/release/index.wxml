@@ -1,0 +1,57 @@
+<!--pages/release/index.wxml-->
+<view class="con">
+  <form bindsubmit="formSubmit">
+    <view class="item">
+      <text>取消</text>
+      <text class="send">发布</text>
+    </view>
+    <view class='item'>
+      <text>公司名称：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>公司类型：</text>
+      <picker  bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
+        <view class="picker">
+          {{objectArray[index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class='item'>
+      <text>公司地址：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>公司主营：</text>
+      <picker bindchange="bindPickerChange1" value="{{idx}}" range="{{objectArray1}}" range-key='name'>
+        <view class="picker">
+          {{objectArray1[index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class='item'>
+      <text>公司主页：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>公司简介：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>联系人：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>联系电话：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>联系邮箱：</text>
+      <input></input>
+    </view>
+    <view class='item'>
+      <text>消息置顶：</text>
+      <switch checked bindchange="switch1Change" />
+    </view>
+  </form>
+</view>

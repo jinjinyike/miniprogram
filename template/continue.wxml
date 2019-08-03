@@ -1,0 +1,5 @@
+<template name='continue'>
+  <view>
+    <image src='../../img/icons/continue.png' alt='续费' class='continue-img' />
+  </view>
+</template>

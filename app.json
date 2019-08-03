@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/company/index",
+    "pages/overtime/index",
+    "pages/infoRelease/index",
+    "pages/release/index",
     "pages/home/index",
     "pages/fail/index",
     "pages/success/index",
@@ -15,7 +18,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarBackgroundColor": "#d43d3d",
     "navigationBarTitleText": "掌上合金",
     "navigationBarTextStyle": "white"
   },
@@ -23,7 +26,7 @@
     "color": "#222",
     "selectedColor": "#fff",
     "borderStyle": "black",
-    "backgroundColor": "#ff0000",
+    "backgroundColor": "#d43d3d",
     "list": [
       {
         "pagePath": "pages/company/index",

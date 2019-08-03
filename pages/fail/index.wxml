@@ -1,5 +1,4 @@
 <!--pages/fail/index.wxml-->
-<!--pages/identifyRes/index.wxml-->
 <import src='../../template/welcomText.wxml' />
 <import src='../../template/fail.wxml' />
 
