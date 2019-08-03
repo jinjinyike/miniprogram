@@ -1,0 +1,5 @@
+<template name='fail'>
+  <view>
+    <image src='../../img/icons/fail.png' alt='失败' class='fail-img' />
+  </view>
+</template>

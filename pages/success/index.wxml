@@ -1,0 +1,17 @@
+<!--pages/identifyRes/index.wxml-->
+<import src='../../template/welcomText.wxml' />
+<import src='../../template/success.wxml' />
+
+<view class="con">
+  <template is='success' />
+  <view class='mtext'>
+    <view>恭喜您注册成功!
+    </view>
+    <view>您可试用5日,5日后需续费使用
+    </view>
+  </view>
+  <view>
+    <template is='welcome'></template>
+  </view>
+  <button class='btn'>开始使用</button>
+</view>

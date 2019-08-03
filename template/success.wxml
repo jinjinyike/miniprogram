@@ -1,0 +1,5 @@
+<template name='success'>
+  <view>
+    <image src='../../img/icons/success.png' alt='成功' class='success-img' />
+  </view>
+</template>

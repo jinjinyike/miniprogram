@@ -1,0 +1,15 @@
+<!--pages/fail/index.wxml-->
+<!--pages/identifyRes/index.wxml-->
+<import src='../../template/welcomText.wxml' />
+<import src='../../template/fail.wxml' />
+
+<view class="con">
+  <template is='fail' />
+  <view class='mtext'>
+    <view>支付失败!
+    </view>
+    <view>请保持网络稳定
+    </view>
+  </view>
+  <button class='btn'>重新支付</button>
+</view>

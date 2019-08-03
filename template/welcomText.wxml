@@ -1,0 +1,5 @@
+<template name='welcome'>
+  <view>
+    <image src='../../img/icons/text.png' alt='掌上合金欢迎你' class='welcom-text' />
+  </view>
+</template>

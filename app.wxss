@@ -8,3 +8,25 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.btn{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background: #f85959;
+  font-size: 36rpx;
+  margin: auto;
+}
+.success-img{
+  width: 208rpx;
+  height: 220rpx;
+}
+.fail-img{
+  width: 226rpx;
+  height: 259rpx;
+}
+.welcom-text{
+  width: 456rpx;
+  height: 60rpx;
+}
