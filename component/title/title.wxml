@@ -1,0 +1,8 @@
+<view class="header-box" style="padding-top: {{statusBarHeight}}px;">
+  <view class="page-title">
+    <view wx:if="{{showBack}}" class="back" bindtap="back">
+      <image src="/img/icons/arrow_left.png" mode='aspectFit'></image>
+    </view>
+    <view>{{header}}</view>
+  </view>
+</view>

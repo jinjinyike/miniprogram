@@ -1,0 +1,49 @@
+<import src='../../template/top.wxml' />
+
+<view class="con">
+  <view class="header">
+    <view class="search">
+      <image src='../../img/icons/search.png' alt='检索'></image>
+      <input placeholder="检索"></input>
+    </view>
+    <image src='../../img/icons/plus1.png' class="plus" alt='发布'></image>
+  </view>
+  <view class="scroll-con">
+    <scroll-view scroll-x class="scroll" style="width: 670rpx">
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+    </scroll-view>
+    <view class='more'>
+      <image src='../../img/icons/more.png' alt='更多' />
+    </view>
+  </view>
+  <view class=' border '> </view>
+  <view>
+    <view class='list'>
+      <view>收购硅锰合金1000吨,联系电话:1333333 3333
+      </view>
+      <view>
+        <template is='top' />
+        <text>路人甲</text>
+        <text>安阳</text>
+        <text>2天前</text>
+      </view>
+    </view>
+    <view class='list'>
+      <view>收购硅锰合金1000吨,联系电话:1333333 3333
+      </view>
+      <view>
+        <template is='top' />
+        <text>路人甲</text>
+        <text>安阳</text>
+        <text>2天前</text>
+      </view>
+    </view>
+  </view>
+</view>

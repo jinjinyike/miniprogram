@@ -1,12 +1,13 @@
 /**app.wxss**/
-.container {
+page {
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  justify-content: space-between; */
   box-sizing: border-box;
+  font-size: 36rpx;
+  font-family: SimHei;
 } 
 .btn{
   width: 300rpx;
@@ -16,6 +17,7 @@
   color: #fff;
   background: #f85959;
   font-size: 36rpx;
+  letter-spacing: 10rpx;
   margin: auto;
 }
 .success-img{
@@ -33,4 +35,14 @@
 .continue-img{
   width: 254rpx;
   height: 252rpx;
+}
+.top{
+	background-color: #ff0000;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  padding: 5rpx 8rpx;
+  display: inline-block;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
 }

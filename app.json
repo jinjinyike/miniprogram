@@ -1,20 +1,23 @@
 {
   "pages": [
+    "pages/self/index",
+    "pages/identify/index",
+    "pages/first/index",
+    "pages/regist/index",
+    "pages/buy/index",
+    "pages/release/index",
     "pages/company/index",
+    "pages/companyinfo/index",
+    "pages/remaining/index",
+    "pages/renewal/index",
     "pages/overtime/index",
     "pages/infoRelease/index",
-    "pages/release/index",
     "pages/home/index",
     "pages/fail/index",
     "pages/success/index",
-    "pages/identify/index",
-    "pages/regist/index",
-    "pages/first/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/buy/index",
-    "pages/sell/index",
-    "pages/self/index"
+    "pages/sell/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -53,6 +56,9 @@
         "selectedIconPath": "img/tabar/selfSelect.png"
       }
     ]
+  },
+  "usingComponents": {
+    "title": "./component/title/title"
   },
   "sitemapLocation": "sitemap.json"
 }

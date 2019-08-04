@@ -1,12 +1,15 @@
 <view class='con'>
-  <text class='title'>身份证认证</text>
+  <!-- <text class='title'>身份证认证</text> -->
   <view class='con-body'>
     <view class='row'>
-      <text>姓名：</text>
-      <input  type="text" maxlength='11' placeholder='请输入您的姓名' />
+      <text>{{type==2?'企业名称':'姓名'}}：</text>
+      <input type="text" maxlength='10' placeholder='请输入' bindinput='bindinput' />
     </view>
-    <view class='rowtext'>身份证照片</view> 
-    <view class='upload' bindtap='upload'>+</view>
-    <button class='btn'>提交信息</button>   
+    <view class='rowtext'>{{type==2?'营业执照照片':'身份证照片'}}</view>
+    <view class='upload' bindtap='upload'>
+      <image wx:if='{{img}}' src='{{img}}'></image>
+      <text wx:else>+</text>
+    </view>
+    <button wx:if='{{!show}}' class='btn' bindtap='submit'>提交信息</button>
   </view>
 </view>

@@ -1,4 +1,6 @@
 <!--pages/release/index.wxml-->
+<title header="交叉分析"></title>
+
 <view class="con">
   <form bindsubmit="formSubmit">
     <view class="item">

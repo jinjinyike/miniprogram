@@ -1,3 +1,5 @@
+<import src='../../template/top.wxml' />
+
 <view class="con">
   <view class="header">
     <view class="search">
@@ -6,8 +8,36 @@
     </view>
     <image src='../../img/icons/plus1.png' class="plus" alt='发布'></image>
   </view>
-  <view class="scro-con">
-    <scroll-view scroll-x class="scroll">
+  <view class="scroll-con">
+    <scroll-view scroll-x class="scroll" style="width: 670rpx">
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
+      <text>锡盟</text>
     </scroll-view>
+    <view class='more'>
+      <image src='../../img/icons/more.png' alt='更多' />
+    </view>
+  </view>
+  <view class=' border '> </view>
+  <view>
+    <view class='list'>
+      <view>阿拉善xx有限公司</view>
+      <view>
+        <template is='top' />
+        <text>钢铁企业</text>
+      </view>
+    </view>
+    <view class='list'>
+      <view>阿拉善xx有限公司</view>
+      <view>
+        <template is='top' />
+        <text>钢铁企业</text>
+      </view>
+    </view>
   </view>
 </view>

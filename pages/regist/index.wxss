@@ -26,7 +26,7 @@
   line-height: 70rpx;
   background: #f4f5f6;
   text-align: center;
-  font-size: 36rpx;
+  font-size: 34rpx;
 }
 .text-center{
   text-align: center;

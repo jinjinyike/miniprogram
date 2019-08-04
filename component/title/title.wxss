@@ -1,0 +1,32 @@
+/* @import '../../styles/iconfont.wxss'; */
+.header-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+}
+.page-title {
+  font-size: 32rpx;
+  color: #303030;
+  height: 80rpx;
+  text-align: left;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  width: 60rpx;
+  height: 100%;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+
+.back cover-image {
+    height: 30rpx;
+    width: 30rpx;
+}

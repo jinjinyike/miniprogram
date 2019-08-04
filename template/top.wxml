@@ -1,0 +1,3 @@
+<template name='top'>
+  <view class='top'>置顶</view>
+</template>

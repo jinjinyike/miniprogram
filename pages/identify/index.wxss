@@ -1,42 +1,56 @@
 /* pages/identify/index.wxss */
+
 /* pages/regist/index.wxss */
-.con{
+
+.con {
   padding: 0 20rpx;
 }
-.con-body{
+
+.con-body {
   margin-top: 170rpx;
 }
-.title{
+
+.title {
   font-size: 48rpx;
   color: #222;
 }
-.row{
+
+.row {
   border-bottom: 1px solid #e8e8e8;
   display: flex;
   height: 70rpx;
   align-items: center;
   font-size: 36rpx;
 }
-.row input{
+
+.row input {
   flex: 1;
   margin-left: 10rpx;
 }
-.rowtext{
+
+.rowtext {
   line-height: 70rpx;
   font-size: 36rpx;
 }
-.upload{
+
+.upload {
   margin-top: 20rpxe;
   width: 200rpx;
   height: 200rpx;
   background: #f4f5f6;
   text-align: center;
+}
+
+.upload text {
   font-size: 70rpx;
-  /* font-weight: 700; */
   line-height: 200rpx;
   color: #ccc;
 }
-.btn{
+.upload image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.btn {
   width: 300rpx;
   height: 80rpx;
   text-align: center;
@@ -45,5 +59,4 @@
   margin-top: 170px;
   background: #f85959;
   color: #fff;
-
 }
