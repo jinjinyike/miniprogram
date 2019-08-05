@@ -4,9 +4,9 @@
     <view class='row'>
       <text>+86 </text>
       <input type="number" maxlength='11' placeholder='手机号' bindinput='bindinput' data-key='phone' />
-      <view class='getcode' bindtap='getCode'>{{btntext}}</view>
+      <view wx:if='{{type==2}}' class='getcode' bindtap='getCode'>{{btntext}}</view>
     </view>
-    <view class='row'>
+    <view class='row' wx:if='{{type==2}}'>
       <text>验证码：</text>
       <input bindinput='bindinput' type="number" maxlength='4' placeholder='输入验证码' data-key='verify' />
     </view>

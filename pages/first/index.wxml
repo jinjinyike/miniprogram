@@ -8,6 +8,7 @@
     </view>
     <view class='registCon'>
       <image src='../../img/icons/registText.png' class='regist' mode='widthFix' bindtap='gotoRegist'></image>
+      <image src='../../img/icons/login.png' class='login' mode='widthFix' bindtap='gotologin'></image>
     </view>
     <image src='../../img/icons/concatText.png' class='concat' mode='widthFix'></image>
   </view>

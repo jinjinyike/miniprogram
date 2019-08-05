@@ -83,19 +83,22 @@ Page({
         icon: 'none'
       })
     }
-    if (!verify || verify.length !== 4) {
+    if ((!verify || verify.length !== 4) && type == 2) {
       return wx.showToast({
         title: '请输入验证码',
         icon: 'none'
       })
     }
-    wx.request({
+    let obj = {
+      phone
+    }
+    if (type == 2) {
+      obj.verify = verify
+    }
+    request({
       url: type == 1 ? API.login : API.regist,
-      data: {
-        phone,
-        verify
-      },
-      type: 'POST',
+      data: obj,
+      method: 'POST',
       success: res => {
         if (type == 1) {
           wx.navigateTo({

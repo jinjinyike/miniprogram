@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/history/index",
     "pages/self/index",
-    "pages/identify/index",
     "pages/first/index",
+    "pages/identify/index",
     "pages/regist/index",
     "pages/buy/index",
     "pages/release/index",

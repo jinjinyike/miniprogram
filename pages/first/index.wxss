@@ -17,34 +17,42 @@
 .logo{
   width: 562rpx;
   height: 132rpx;
-  margin-top: 80rpx;
+  margin-top: 60rpx;
 }
 .column{
   text-align: left;
   vertical-align: top;
-  position: relative;
   z-index: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 110rpx;
 }
 .column1{
-  margin: 80rpx 80rpx 0 110rpx;
+  margin: 60rpx 80rpx 0 0rpx;
   width: 40rpx;
   height: 663rpx;
 }
 .column2{
   width: 40rpx;
   height: 530rpx;
-  position: absolute;
-  top: 120rpx;
-  /* margin-top: 125rpx; */
+  margin-top: 90rpx;
 }
 .registCon{
-  /* margin-top: -70rpx; */
+  margin-top: -130rpx;
   z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .regist{
   width: 364rpx;
   height: 75rpx;
   cursor: pointer;
+  margin-bottom: 25rpx;
+}
+.login{
+  width: 169rpx;
+  height: 77rpx;
 }
 .concat{
   width: 380rpx;
