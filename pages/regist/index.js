@@ -100,8 +100,15 @@ Page({
       data: obj,
       method: 'POST',
       success: res => {
+        console.log(res)
+        console.log(type == 1)
         if (type == 1) {
-          wx.navigateTo({
+          app.globalData.userInfo=res.data;
+          wx.setStorage({
+            key: 'userInfo',
+            data: JSON.stringify(res.data),
+          })
+          wx.switchTab({
             url: '../company/index',
           })
         } else {

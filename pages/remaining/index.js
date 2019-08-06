@@ -1,4 +1,6 @@
 // pages/remaining/index.js
+const app = getApp();
+
 const request = require('../../utils/request');
 import {
   API,
@@ -20,6 +22,9 @@ Page({
   onLoad: function(options) {
     request({
       url: API.expire,
+      data: {
+        id: app.globalData.userInfo.id
+      },
       method: 'POST',
       success: res => {
 

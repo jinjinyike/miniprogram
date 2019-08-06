@@ -1,9 +1,21 @@
 import {
-  API
-  , STORAGE
+  API,
+  STORAGE
 } from './utils/config.js';
 const moment = require('./utils/moment.min.js');
 App({
+  onLaunch() {
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        console.log(res)
+        if (!this.globalData.userInfo) {
+          this.globalData.userInfo = JSON.parse(res.data)
+        }
+      },
+    })
+
+  },
   updateGlobal(data, page) {
     this.globalData = {
       ...this.globalData,
@@ -17,12 +29,8 @@ App({
   loginCount: 0,
   globalData: {
     statusBarHeight: 20,
-    month: null,
     userInfo: null,
-    modules: null,
     token: null,
-    applist: [
-    ],
     getCurrent: true
   }
 })

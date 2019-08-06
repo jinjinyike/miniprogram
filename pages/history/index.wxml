@@ -1,2 +1,25 @@
 <!--pages/history/index.wxml-->
-<text>pages/history/index.wxml</text>
+<import src='../../template/top.wxml' />
+
+<view class="pro">
+  <view class='list'>
+    <view>收购硅锰合金1000吨,联系电话:1333333 3333
+    </view>
+    <view>
+      <template is='top' />
+      <text>路人甲</text>
+      <text>安阳</text>
+      <text>2天前</text>
+    </view>
+  </view>
+  <view class='list'>
+    <view>收购硅锰合金1000吨,联系电话:1333333 3333
+    </view>
+    <view>
+      <template is='top' />
+      <text>路人甲</text>
+      <text>安阳</text>
+      <text>2天前</text>
+    </view>
+  </view>
+</view>

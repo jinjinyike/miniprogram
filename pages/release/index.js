@@ -14,7 +14,8 @@ Page({
         name: '销售公司'
       }
     ],
-    index: 1,
+    index: 0,
+    idx: 0,
     objectArray1: [{
         id: 1,
         name: '金属'
@@ -33,6 +34,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+
+  },
+  formSubmit(e) {
+    console.log(e)
+    let obj = e.detail.value;
+    obj.is_top = obj.is_top ? 1 : 0;
+    obj.type = obj.type + 1;
+    for (let key in obj) {
+      if (!obj[key] && obj[key] !== 0) {
+        wx.showToast({
+          title: '请填写完整信息',
+          icon: 'none'
+        })
+        break
+      }
+    }
+    obj.user_id = app.globalData.userInfo.id;
+    request({
+      url: API.releaseCompany,
+      data: obj,
+      method: 'POST',
+      success: res => {},
+      fail: function(res) {},
+    })
 
   },
   bindPickerChange: function(e) {

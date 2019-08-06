@@ -15,6 +15,7 @@ module.exports = {
     businessAdd: `${HOST}/api/about/businessAdd`, //营业执照认证
     business: `${HOST}/api/about/business`, //营业查询
     expire: `${HOST}/api/about/expire`, //期限剩余
-
+    history: `${HOST}/api/about/news`, //历史发布
+    releaseCompany: `${HOST}/api/company/create`, //发布企业
   }
 }

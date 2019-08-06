@@ -9,7 +9,7 @@
   </view>
   <view class="list">
     <text>历史发布</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap="gotohistory"></image>
   </view>
   <view class="list">
     <text>期限剩余</text>

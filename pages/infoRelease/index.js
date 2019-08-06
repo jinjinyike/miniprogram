@@ -1,4 +1,10 @@
 // pages/infoRelease/index.js
+const app = getApp();
+const request = require('../../utils/request');
+import {
+  API,
+  HOST
+} from '../../utils/config.js';
 Page({
 
   /**

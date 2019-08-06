@@ -27,10 +27,13 @@ Page({
     this.setData({
       type
     })
+    console.log(app.globalData)
     if (type != 1) {
       request({
         url: type == 2 ? API.identity : API.business,
-        // data: '',
+        data: {
+          id: app.globalData.userInfo.id
+        },
         method: 'POST',
         success: res => {
           if (res.data) {

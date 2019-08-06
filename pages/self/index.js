@@ -36,6 +36,11 @@ Page({
       url: '../renewal/index',
     })
   },
+  gotohistory(){
+    wx.navigateTo({
+      url: '../history/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

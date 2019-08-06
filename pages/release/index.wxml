@@ -1,19 +1,19 @@
 <!--pages/release/index.wxml-->
-<title header="交叉分析"></title>
+<!-- <title header="交叉分析"></title> -->
 
 <view class="con">
   <form bindsubmit="formSubmit">
     <view class="item">
       <text>取消</text>
-      <text class="send">发布</text>
+      <button class="send" form-type="submit" >发布</button>
     </view>
     <view class='item'>
       <text>公司名称：</text>
-      <input></input>
+      <input name='name'></input>
     </view>
     <view class='item'>
       <text>公司类型：</text>
-      <picker  bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
+      <picker  name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
         <view class="picker">
           {{objectArray[index].name}}
         </view>
@@ -21,11 +21,11 @@
     </view>
     <view class='item'>
       <text>公司地址：</text>
-      <input></input>
+      <input name='address'></input>
     </view>
     <view class='item'>
       <text>公司主营：</text>
-      <picker bindchange="bindPickerChange1" value="{{idx}}" range="{{objectArray1}}" range-key='name'>
+      <picker name='major' bindchange="bindPickerChange1" value="{{idx}}" range="{{objectArray1}}" range-key='name'>
         <view class="picker">
           {{objectArray1[index].name}}
         </view>
@@ -33,27 +33,27 @@
     </view>
     <view class='item'>
       <text>公司主页：</text>
-      <input></input>
+      <input name='url'></input>
     </view>
     <view class='item'>
       <text>公司简介：</text>
-      <input></input>
+      <input name='desc'></input>
     </view>
     <view class='item'>
       <text>联系人：</text>
-      <input></input>
+      <input name='link_name'></input>
     </view>
     <view class='item'>
       <text>联系电话：</text>
-      <input></input>
+      <input name='link_phone'></input>
     </view>
     <view class='item'>
       <text>联系邮箱：</text>
-      <input></input>
+      <input name='link_email'></input>
     </view>
     <view class='item'>
       <text>消息置顶：</text>
-      <switch checked bindchange="switch1Change" />
+      <switch checked bindchange="switch1Change" name='is_top'/>
     </view>
   </form>
 </view>
