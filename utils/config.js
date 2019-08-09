@@ -17,5 +17,9 @@ module.exports = {
     expire: `${HOST}/api/about/expire`, //期限剩余
     history: `${HOST}/api/about/news`, //历史发布
     releaseCompany: `${HOST}/api/company/create`, //发布企业
+    companyList: `${HOST}/api/company/showList`, //企业列表
+    concernCompany: `${HOST}/api/company/concern`, //关注企业
+    delConcernCompany: `${HOST}/api/company/delConcern`, //取消关注企业
+    companyInfo: `${HOST}/api/company/info`, //企业详情
   }
 }

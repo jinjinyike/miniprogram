@@ -61,3 +61,17 @@
 	letter-spacing: 0rpx;
 	color: #222222;
 }
+.item{
+  height: 77rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+  border-bottom: 1px solid #e8e8e8;
+  color: #222;
+}
+.item text:nth-of-type(2){
+  text-align: right;
+  color: #a0a0a0;
+  flex: 1;
+}

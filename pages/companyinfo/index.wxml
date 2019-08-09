@@ -3,16 +3,36 @@
   <view class="card">
     <image class="img" src='../../img/icons/card.jpg'></image>
     <view class="info-card">
-      <view class="company-name">河南省XXX有限责任公司</view>
-      <view class="user-name">张先生</view>
-      <view class="user-phone">电话：13333333333</view>
-      <view class="user-email">邮箱：123456789@qq.com</view>
+      <view class="company-name">{{info.name}}</view>
+      <view class="user-name">{{info.link_name}}</view>
+      <view class="user-phone">电话：{{info.link_phone}}</view>
+      <view class="user-email">邮箱：{{info.link_email}}</view>
     </view>
   </view>
   <view class="info-list">
-    <view class="info-list-item">
-      <text class="label">公司类型</text>
-      <text class="text">生产厂家</text>
+    <view class='item'>
+      <text>公司类型：</text>
+      <text>{{info.type==1?'生产厂家':'销售公司'}}</text>
+    </view>
+    <view class="item">
+      <text class="label">公司地址：</text>
+      <text class="text">{{info.address}}</text>
+    </view>
+    <view class="item">
+      <text class="label">公司主营：</text>
+      <text class="text">{{info.major}}</text>
+    </view>
+    <view class='item'>
+      <text>公司主页：</text>
+      <text>{{info.url}}</text>
+    </view>
+    <view class='item'>
+      <text>公司简介：</text>
+      <text>{{info.desc}}</text>
+    </view>
+    <view class='item'>
+      <text>添加关注：</text>
+      <switch checked bindchange="switchChange" />
     </view>
   </view>
 </view>

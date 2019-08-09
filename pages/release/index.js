@@ -1,4 +1,10 @@
 // pages/release/index.js
+const app = getApp();
+const request = require('../../utils/request');
+import {
+  API,
+  HOST
+} from '../../utils/config.js';
 Page({
 
   /**
@@ -39,8 +45,9 @@ Page({
   formSubmit(e) {
     console.log(e)
     let obj = e.detail.value;
-    obj.is_top = obj.is_top ? 1 : 0;
-    obj.type = obj.type + 1;
+    obj.is_top = obj.is_top ? 1 : 0;//是否置顶0-非，1-是
+    obj.type = Number(obj.type) + 1;//公司类型1-生产厂家，2-销售公司
+    //major字段待定
     for (let key in obj) {
       if (!obj[key] && obj[key] !== 0) {
         wx.showToast({
@@ -55,7 +62,11 @@ Page({
       url: API.releaseCompany,
       data: obj,
       method: 'POST',
-      success: res => {},
+      success: res => {
+        wx.switchTab({
+          url: '../company/index',
+        })
+      },
       fail: function(res) {},
     })
 
@@ -64,6 +75,11 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
+    })
+  },
+  gotoback(){
+    wx.navigateBack({
+      delta: 1,
     })
   },
   /**

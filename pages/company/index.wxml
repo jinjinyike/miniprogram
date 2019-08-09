@@ -4,9 +4,9 @@
   <view class="header">
     <view class="search">
       <image src='../../img/icons/search.png' alt='检索'></image>
-      <input placeholder="检索"></input>
+      <input placeholder="检索"  value="{{search.kw}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
     </view>
-    <image src='../../img/icons/plus1.png' class="plus" alt='发布'></image>
+    <image src='../../img/icons/plus1.png' class="plus" alt='发布' bindtap="gotorelease"></image>
   </view>
   <view class="scroll-con">
     <scroll-view scroll-x class="scroll" style="width: 670rpx">
@@ -25,18 +25,11 @@
   </view>
   <view class=' border '> </view>
   <view>
-    <view class='list'>
-      <view>阿拉善xx有限公司</view>
+    <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
+      <view>{{item.name}}</view>
       <view>
-        <template is='top' />
-        <text>钢铁企业</text>
-      </view>
-    </view>
-    <view class='list'>
-      <view>阿拉善xx有限公司</view>
-      <view>
-        <template is='top' />
-        <text>钢铁企业</text>
+        <template is='top' wx:if='{{item.is_top}}' />
+        <text>{{item.type}}</text>
       </view>
     </view>
   </view>

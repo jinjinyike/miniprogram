@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/release/index",
+    "pages/company/index",
+    "pages/companyinfo/index",
     "pages/self/index",
+    "pages/release/index",
     "pages/first/index",
     "pages/history/index",
     "pages/identify/index",
     "pages/regist/index",
     "pages/buy/index",
-    "pages/company/index",
-    "pages/companyinfo/index",
     "pages/remaining/index",
     "pages/renewal/index",
     "pages/overtime/index",
