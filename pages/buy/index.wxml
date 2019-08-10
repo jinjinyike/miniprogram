@@ -4,13 +4,13 @@
   <view class="header">
     <view class="search">
       <image src='../../img/icons/search.png' alt='检索'></image>
-      <input placeholder="检索"></input>
+      <input placeholder="检索" value="{{search.kw}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
     </view>
-    <image src='../../img/icons/plus1.png' class="plus" alt='发布'></image>
+    <image src='../../img/icons/plus1.png' class="plus" alt='发布' bindtap="gotorelease"></image>
   </view>
   <view class="scroll-con">
     <scroll-view scroll-x class="scroll" style="width: 670rpx">
-      <text>锡盟</text>
+      <text >锡盟</text>
       <text>锡盟</text>
       <text>锡盟</text>
       <text>锡盟</text>
@@ -25,7 +25,21 @@
   </view>
   <view class=' border '> </view>
   <view class="pro">
-    <view class='list'>
+  <view wx:if='{{list.length>0}}'>
+    <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
+      <view>{{item.name}}</view>
+      <view>
+        <template is='top' wx:if='{{item.is_top}}' />
+        <text>路人甲</text>
+        <text>安阳</text>
+        <text>2天前</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="no-more">
+    <image alt='无数据' src='../../img/icons/no.png'></image>
+  </view>
+    <!-- <view class='list'>
       <view>收购硅锰合金1000吨,联系电话:1333333 3333
       </view>
       <view>
@@ -44,6 +58,6 @@
         <text>安阳</text>
         <text>2天前</text>
       </view>
-    </view>
+    </view> -->
   </view>
 </view>

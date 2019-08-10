@@ -4,7 +4,7 @@
   <view class="header">
     <view class="search">
       <image src='../../img/icons/search.png' alt='检索'></image>
-      <input placeholder="检索"  value="{{search.kw}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
+      <input placeholder="检索" value="{{search.kw}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
     </view>
     <image src='../../img/icons/plus1.png' class="plus" alt='发布' bindtap="gotorelease"></image>
   </view>
@@ -24,7 +24,7 @@
     </view>
   </view>
   <view class=' border '> </view>
-  <view>
+  <view wx:if='{{list.length>0}}'>
     <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
       <view>{{item.name}}</view>
       <view>
@@ -32,5 +32,8 @@
         <text>{{item.type}}</text>
       </view>
     </view>
+  </view>
+  <view wx:else class="no-more">
+    <image alt='无数据' src='../../img/icons/no.png'></image>
   </view>
 </view>

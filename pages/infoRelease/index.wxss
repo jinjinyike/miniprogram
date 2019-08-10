@@ -1,8 +1,10 @@
 /* pages/release/index.wxss */
-.con{
+
+.con {
   padding: 0 25rpx;
 }
-.item{
+
+.item {
   height: 77rpx;
   display: flex;
   justify-content: space-between;
@@ -11,11 +13,27 @@
   border-bottom: 1px solid #e8e8e8;
   color: #222;
 }
-.item input{
+
+.item input {
   /* text-align: right; */
   color: #a0a0a0;
   flex: 1;
 }
-.send{
-  color: #F85959;
+
+.item text:nth-of-type(2) {
+  color: #a0a0a0;
+  flex: 1;
+}
+
+.send {
+  color: #f85959;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  width: auto;
+  font-size: 36rpx;
+  padding: 0;
+  text-align: right;
+  position: static;
+  flex: auto;
 }

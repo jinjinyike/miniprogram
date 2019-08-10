@@ -22,7 +22,11 @@ Page({
   onReady: function () {
 
   },
-
+  gotopay(){
+    wx.navigateTo({
+      url: '../renewal/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

@@ -24,6 +24,9 @@
   width: auto;
   font-size: 36rpx;
   padding: 0;
+  text-align: right;
+  position: static;
+  flex: auto;
 }
 .send::after{
   border: none!important;

@@ -47,7 +47,8 @@ Page({
     search.kw = kw;
     search.pagenum = 1;
     this.setData({
-      search
+      search,
+      list:[]
     }, _ => {
       this.getList()
     })
@@ -75,7 +76,7 @@ Page({
     })
   },
   gotoinfo(e) {
-    let id = e.datail.target.dataset.id
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: '../companyinfo/index?id=' + id,
     })

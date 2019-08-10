@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/overtime/index",
+    "pages/buy/index",
     "pages/company/index",
     "pages/companyinfo/index",
     "pages/self/index",
@@ -8,10 +10,8 @@
     "pages/history/index",
     "pages/identify/index",
     "pages/regist/index",
-    "pages/buy/index",
     "pages/remaining/index",
     "pages/renewal/index",
-    "pages/overtime/index",
     "pages/infoRelease/index",
     "pages/fail/index",
     "pages/success/index",

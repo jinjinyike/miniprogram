@@ -20,6 +20,11 @@ module.exports = {
     companyList: `${HOST}/api/company/showList`, //企业列表
     concernCompany: `${HOST}/api/company/concern`, //关注企业
     delConcernCompany: `${HOST}/api/company/delConcern`, //取消关注企业
-    companyInfo: `${HOST}/api/company/info`, //企业详情
+    newsShowList: `${HOST}/api/news/showList`, //收购或出售列表
+    newsAdd: `${HOST}/api/news/create`, //出售或者收购发布
+    newsInfo: `${HOST}/api/news/info`, //出售或者收购详情
+    concernNews: `${HOST}/api/news/concern`, //关注出售或者收购
+    delconcernNews: `${HOST}/api/news/delConcern`, //取消关注出售或者收购
+    
   }
 }

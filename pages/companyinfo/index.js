@@ -29,6 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.setNavigationBarTitle({
+      title: '企业详情',
+    })
     let id = options.id;
     wx.request({
       url: API.companyInfo,
@@ -48,7 +51,7 @@ Page({
     let {
       id
     } = this.data.info;
-    let value = e.tatget.value;
+    let value = e.detail.value;
     request({
       url: value ? API.concernCompany : API.delConcernCompany,
       data: {
