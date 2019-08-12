@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/first/index",
+    "pages/company/index",
     "pages/overtime/index",
     "pages/buy/index",
-    "pages/company/index",
     "pages/companyinfo/index",
     "pages/self/index",
     "pages/release/index",
-    "pages/first/index",
     "pages/history/index",
     "pages/identify/index",
     "pages/regist/index",

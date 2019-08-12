@@ -31,9 +31,9 @@ const request = (options) => {
     header: {
       'content-type': options.contentType || 'application/json',
       ...options.header,
-      token: app.globalData.token
+      id: app.globalData.userInfo ? app.globalData.userInfo.id : ''
     },
-    success: function (res) {
+    success: function(res) {
       if (res.data.code === 10004) {
         app.getUserInfo(() => {
           request(options);
@@ -42,10 +42,10 @@ const request = (options) => {
         typeof options.success === 'function' && options.success.call(this, res.data, res);
       }
     },
-    fail: function () {
+    fail: function() {
       console.error(res.data)
     },
-    complete: function () {
+    complete: function() {
       clearTimeout(loading);
       wx.hideLoading();
     }

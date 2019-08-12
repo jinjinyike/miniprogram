@@ -46,7 +46,8 @@ Page({
     }
   },
   upload() {
-    if (!this.state.show) return
+    console.log(111)
+    if (!this.data.show) return
     wx.chooseImage({
       success: res => {
         console.log(res)

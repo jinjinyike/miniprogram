@@ -45,6 +45,9 @@
   color: #222;
   font-size: 36rpx;
 }
+.scroll .active{
+  color: #F85959;
+}
 .more{
   border-left: 1px solid #e8e8e8;
   width: 80rpx;

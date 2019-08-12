@@ -26,10 +26,18 @@ Page({
       type: '钢铁企业',
       is_top: false
     }],
+    moldArr: [{
+      id: 1,
+      name: '关注'
+    }, {
+      id: 2,
+      name: '推荐'
+    }],
     search: {
       kw: '',
       pagesize: 10,
-      pagenum: 1
+      pagenum: 1,
+      mold: 1
     }
   },
 
@@ -37,7 +45,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getkeys()
+    this.getList()
+  },
+  getkeys() {
+    request({
+      url: API.labelList,
+      method: 'POST',
+      success: res => {
+        this.setData({moldArr:this.data.moldArr.concat(res.data)})
+      },
+    })
+  },
+  changekey(e) {
+    let id = e.currentTarget.dataset.id;
+    let search = this.data.search;
+    search.mold = id
+    this.setData({
+      search,
+      list: []
+    }, _ => {
+      this.getList()
+    })
   },
   handleKeyInput(e) {
     let kw = e.detail.value;
@@ -48,7 +77,7 @@ Page({
     search.pagenum = 1;
     this.setData({
       search,
-      list:[]
+      list: []
     }, _ => {
       this.getList()
     })
@@ -63,7 +92,7 @@ Page({
         if (res.data.length == 0) return
         obj.pagenum += 1;
         this.setData({
-          list: this.data.list.concat(res.data),
+          list: this.data.list.concat(res.data.list),
           search: obj
         })
       },

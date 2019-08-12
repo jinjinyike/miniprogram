@@ -40,13 +40,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getkeys()
+  },
+  getkeys() {
+    request({
+      url: API.labelList,
+      method: 'POST',
+      success: res => {
+        this.setData({
+          objectArray1: res.data
+        })
+      },
+    })
   },
   formSubmit(e) {
     console.log(e)
     let obj = e.detail.value;
-    obj.is_top = obj.is_top ? 1 : 0;//是否置顶0-非，1-是
-    obj.type = Number(obj.type) + 1;//公司类型1-生产厂家，2-销售公司
+    obj.is_top = obj.is_top ? 1 : 0; //是否置顶0-非，1-是
+    obj.type = Number(obj.type) + 1; //公司类型1-生产厂家，2-销售公司
     //major字段待定
     for (let key in obj) {
       if (!obj[key] && obj[key] !== 0) {
@@ -77,7 +88,7 @@ Page({
       index: e.detail.value
     })
   },
-  gotoback(){
+  gotoback() {
     wx.navigateBack({
       delta: 1,
     })

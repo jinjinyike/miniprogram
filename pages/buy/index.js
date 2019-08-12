@@ -39,7 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getList()
   },
   handleKeyInput(e) {
     let kw = e.detail.value;
@@ -65,7 +65,7 @@ Page({
         if (res.data.length == 0) return
         obj.pagenum += 1;
         this.setData({
-          list: this.data.list.concat(res.data),
+          list: this.data.list.concat(res.data.list),
           search: obj
         })
       },
