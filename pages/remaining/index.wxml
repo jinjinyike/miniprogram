@@ -6,7 +6,7 @@
       <text class="num-text">{{use_name}}</text>天
     </view>
     <view class="smart-text">
-      使用期限剩余
+      消息置顶剩余
       <text class="num-text">{{message_num}}</text>天
     </view>
   </view>

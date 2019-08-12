@@ -27,17 +27,18 @@ Page({
       is_top: false
     }],
     moldArr: [{
-      id: 1,
+      id: 'a',
       name: '关注'
     }, {
-      id: 2,
+      id: 'b',
       name: '推荐'
     }],
     search: {
       kw: '',
       pagesize: 10,
       pagenum: 1,
-      mold: 1
+      mold: 'a',
+      kw: '关注'
     }
   },
 
@@ -53,14 +54,20 @@ Page({
       url: API.labelList,
       method: 'POST',
       success: res => {
-        this.setData({moldArr:this.data.moldArr.concat(res.data)})
+        this.setData({
+          moldArr: this.data.moldArr.concat(res.data)
+        })
       },
     })
   },
   changekey(e) {
-    let id = e.currentTarget.dataset.id;
+    let {
+      id,
+      kw
+    } = e.currentTarget.dataset;
     let search = this.data.search;
-    search.mold = id
+    search.mold = id;
+    search.kw = kw
     this.setData({
       search,
       list: []
@@ -84,9 +91,23 @@ Page({
   },
   getList() {
     let obj = this.data.search
+    let mold
+    switch (obj.kw) {
+      case '关注':
+        mold = 1;
+        break
+      case '推荐':
+        mold = 2;
+        break
+      default:
+        mold = 3;
+        break
+    }
     request({
       url: API.companyList,
-      data: obj,
+      data: { ...obj,
+        mold
+      },
       method: 'POST',
       success: res => {
         if (res.data.length == 0) return

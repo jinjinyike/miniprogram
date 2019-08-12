@@ -64,21 +64,9 @@
 }
 .no-more{
   text-align: center;
+  margin-top: 200rpx;
 }
 .no-more image{
   width: 455rpx;
   height: 273rpx;
 }
-/* .list{
-  height: 103rpx;
-  padding: 10rpx 0;
-  margin: 0 25rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid #e8e8e8;
-}
-.list text{
-  color: #999;
-  font-size: 24rpx;
-} */

@@ -19,7 +19,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {;
+  // type 1注册身份验证 2营业执照 3个人-身份认证
+  onLoad: function(options) {
+    console.log(options)
     let type = options.type
     wx.setNavigationBarTitle({
       title: type == 2 ? '企业营业执照' : '身份认证'
@@ -27,16 +29,15 @@ Page({
     this.setData({
       type
     })
-    console.log(app.globalData)
     if (type != 1) {
       request({
-        url: type == 2 ? API.identity : API.business,
+        url: type == 3 ? API.identity : API.business,
         data: {
           id: app.globalData.userInfo.id
         },
         method: 'POST',
         success: res => {
-          if (res.data) {
+          if (res.code == 0) {
             this.setData({
               show: true
             })
@@ -47,7 +48,7 @@ Page({
   },
   upload() {
     console.log(111)
-    if (!this.data.show) return
+    if (this.data.show) return
     wx.chooseImage({
       success: res => {
         console.log(res)
@@ -80,18 +81,23 @@ Page({
         [`${type == 2 ?'company_name':'name'}`]: name
       },
       success: res => {
-        console.log(res)
-        // if (res.code == 0) {
-        let url = type == 2 ? '../self/index' : '../success/index?type=1'
-        wx.redirectTo({
-          url: url,
-        })
-        // } else {
-        wx.showToast({
-          title: res.msg,
-          icon: 'none'
-        })
-        // }
+        if (res.code == 0) {
+          if (type == 1) {
+            wx.redirectTo({
+              url: '../success/index?type=1',
+            })
+          } else {
+            wx.switchTab({
+              url: '../self/index',
+            })
+          }
+
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
       }
     })
   },

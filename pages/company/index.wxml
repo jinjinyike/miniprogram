@@ -10,7 +10,7 @@
   </view>
   <view class="scroll-con">
     <scroll-view scroll-x class="scroll" style="width: 670rpx">
-      <text wx:for='{{moldArr}}' data-id='{{item.id}}' bindtap="changekey" class="{{item.id==search.mold?'active':''}}" wx:key='{{item.id}}'>{{item.name}}</text>
+      <text wx:for='{{moldArr}}' data-id='{{item.id}}' data-kw='{{item.name}}' bindtap="changekey" class="{{item.id==search.mold?'active':''}}" wx:key='{{item.id}}'>{{item.name}}</text>
       <!-- <text>锡盟</text>
       <text>锡盟</text>
       <text>锡盟</text>
