@@ -11,13 +11,6 @@
   <view class="scroll-con">
     <scroll-view scroll-x class="scroll" style="width: 670rpx">
       <text wx:for='{{moldArr}}' data-id='{{item.id}}' data-kw='{{item.name}}' bindtap="changekey" class="{{item.id==search.mold?'active':''}}" wx:key='{{item.id}}'>{{item.name}}</text>
-      <!-- <text>锡盟</text>
-      <text>锡盟</text>
-      <text>锡盟</text>
-      <text>锡盟</text>
-      <text>锡盟</text>
-      <text>锡盟</text>
-      <text>锡盟</text> -->
     </scroll-view>
     <view class='more'>
       <image src='../../img/icons/more.png' alt='更多' />
@@ -29,7 +22,7 @@
       <view>{{item.name}}</view>
       <view>
         <template is='top' wx:if='{{item.is_top}}' />
-        <text>{{item.type}}</text>
+        <text>{{item.type==1?'生产厂家':'销售公司'}}</text>
       </view>
     </view>
   </view>

@@ -11,6 +11,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    search: {
+      pagenum: 1,
+      pagesize: 10
+    },
     list: []
   },
 
@@ -18,20 +22,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.getList()
+  },
+  getList() {
     request({
       url: API.history,
-      data: {
-        id: app.globalData.userInfo
-      },
+      data: this.data.search,
       method: 'POST',
       success: res => {
-        this.setData({
-          list: res.data
-        })
+        let search = this.data.search;
+        secarch.pagenum += 1;
+        if (res.data.list.length) {
+          this.setData({
+            list: res.data,
+            secarch
+          })
+        }
       },
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -71,7 +80,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    this.getList()
   },
 
   /**

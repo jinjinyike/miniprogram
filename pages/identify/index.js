@@ -37,7 +37,7 @@ Page({
         },
         method: 'POST',
         success: res => {
-          if (res.code == 0) {
+          if (res.data) {
             this.setData({
               show: true
             })
@@ -76,12 +76,16 @@ Page({
     wx.uploadFile({
       url: type == 2 ? API.businessAdd : API.identityAdd, //仅为示例，非真实的接口地址
       filePath: img,
+      header: {
+        id: app.globalData.userInfo ? app.globalData.userInfo.id : ''
+      },
       name: type == 2 ? 'business_license' : 'identity_card',
       formData: {
         [`${type == 2 ?'company_name':'name'}`]: name
       },
       success: res => {
-        if (res.code == 0) {
+        console.log(res.data)
+        if (res.data.code == 0) {
           if (type == 1) {
             wx.redirectTo({
               url: '../success/index?type=1',
@@ -94,7 +98,7 @@ Page({
 
         } else {
           wx.showToast({
-            title: res.msg,
+            title: '认证失败',
             icon: 'none'
           })
         }

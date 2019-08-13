@@ -13,14 +13,16 @@ Page({
   data: {
     objectArray: [{
         id: 1,
-        name: '收购'
+        name: '出售'
       },
       {
         id: 2,
-        name: '出售'
+        name: '收购'
       }
     ],
-    index: 0,
+    index: 1,
+    idx: 0,
+    objectArray1: [],
     id: '',
     info: {
       name: '1111'
@@ -45,14 +47,34 @@ Page({
           })
         },
       })
+    } else {
+      this.getkeys()
     }
+  },
+  getkeys() {
+    request({
+      url: API.labelList,
+      method: 'POST',
+      success: res => {
+        this.setData({
+          objectArray1: res.data
+        })
+      },
+    })
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    let key = e.currentTarget.dataset.key
+    this.setData({
+      [key]: e.detail.value
+    })
   },
   formSubmit(e) {
     console.log(e)
     let obj = e.detail.value;
     obj.is_top = obj.is_top ? 1 : 0; //是否置顶0-非，1-是
     obj.type = this.data.objectArray[this.data.index].id; //类型1-出售-2收购
-    //major字段待定
+    obj.label = this.data.objectArray1[this.data.idx].name; //类型1-出售-2收购
     for (let key in obj) {
       if (!obj[key] && obj[key] !== 0) {
         wx.showToast({
@@ -68,20 +90,23 @@ Page({
       data: obj,
       method: 'POST',
       success: res => {
-        let url = obj.type == 1 ? '../sell/index' : '../buy/index'
-        wx.switchTab({
-          url: url,
-        })
+        if (res.code == 0) {
+          let url = obj.type == 1 ? '../sell/index' : '../buy/index'
+          wx.switchTab({
+            url: url,
+          })
+        } else {
+          wx.showToast({
+            title: '发布失败',
+            icon: 'none'
+          })
+        }
+
       },
       fail: function(res) {},
     })
   },
-  bindPickerChange: function(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
+
   switchChange(e) {
     console.log(e)
     let {

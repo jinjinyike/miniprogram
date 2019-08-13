@@ -34,7 +34,7 @@ Page({
       name: '推荐'
     }],
     search: {
-      kw: '',
+      name: '',
       pagesize: 10,
       pagenum: 1,
       mold: 'a',
@@ -60,6 +60,7 @@ Page({
       },
     })
   },
+  // 切换label
   changekey(e) {
     let {
       id,
@@ -67,7 +68,8 @@ Page({
     } = e.currentTarget.dataset;
     let search = this.data.search;
     search.mold = id;
-    search.kw = kw
+    search.kw = kw;
+    search.pagenum = 1;
     this.setData({
       search,
       list: []
@@ -75,12 +77,13 @@ Page({
       this.getList()
     })
   },
+  // 搜索框
   handleKeyInput(e) {
     let kw = e.detail.value;
     let {
       search
     } = this.data
-    search.kw = kw;
+    search.name = kw;
     search.pagenum = 1;
     this.setData({
       search,

@@ -12,8 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    use_name: 0,
-    message_num: 0
+    show_expire_time: 0,
+    top_expire_time: 0
   },
 
   /**
@@ -27,7 +27,10 @@ Page({
       },
       method: 'POST',
       success: res => {
-
+        if (res.data) {
+          this.setData({ ...res.data
+          })
+        }
       },
     })
   },

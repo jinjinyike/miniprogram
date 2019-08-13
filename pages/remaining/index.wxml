@@ -3,11 +3,11 @@
   <view class="con-text">
     <view class="smart-text">
       使用期限剩余
-      <text class="num-text">{{use_name}}</text>天
+      <text class="num-text">{{show_expire_time||0}}</text>天
     </view>
     <view class="smart-text">
       消息置顶剩余
-      <text class="num-text">{{message_num}}</text>天
+      <text class="num-text">{{top_expire_time||0}}</text>天
     </view>
   </view>
   <button class="btn btn-pay" bindtap='gotopay'>立即充值</button>

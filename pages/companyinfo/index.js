@@ -29,20 +29,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options)
     wx.setNavigationBarTitle({
       title: '企业详情',
     })
     let id = options.id;
-    wx.request({
+    request({
       url: API.companyInfo,
       data: {
         id
       },
       method: 'POST',
       success: res => {
-        // this.setData({
-        //   info: res.data
-        // })
+        this.setData({
+          info: res.data
+        })
       },
     })
   },
@@ -59,9 +60,17 @@ Page({
       },
       method: 'POST',
       success: res => {
-        wx.showToast({
-          title: value ? '关注成功' : '取消关注成功',
-        })
+        if (res.code == 0) {
+          wx.showToast({
+            title: value ? '关注成功' : '取消关注成功',
+          })
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
+
       },
     })
   },

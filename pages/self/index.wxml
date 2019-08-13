@@ -1,22 +1,22 @@
 <view class='con'>
-  <view class="list" bindtap='goto'>
+  <view class="list" bindtap='gotoidentify' data-type='2'>
     <text>企业营业执照认证</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap='gotoidentify' data-type='2'></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
   </view>
-  <view class="list">
+  <view class="list" bindtap='gotoidentify' data-type='3'>
     <text>身份证认证</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap='gotoidentify' data-type='3'></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
   </view>
-  <view class="list">
+  <view class="list" bindtap="gotohistory">
     <text>历史发布</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap="gotohistory"></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
   </view>
-  <view class="list">
+  <view class="list" bindtap='gotorest'>
     <text>期限剩余</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap='gotorest'></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
   </view>
-  <view class="list">
+  <view class="list" bindtap='gotopay'>
     <text>充值</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' bindtap='gotopay'></image>
+    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
   </view>
 </view>

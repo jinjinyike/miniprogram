@@ -18,6 +18,7 @@ module.exports = {
     history: `${HOST}/api/about/news`, //历史发布
     releaseCompany: `${HOST}/api/company/create`, //发布企业
     companyList: `${HOST}/api/company/showList`, //企业列表
+    companyInfo: `${HOST}/api/company/info`, //企业详情
     concernCompany: `${HOST}/api/company/concern`, //关注企业
     delConcernCompany: `${HOST}/api/company/delConcern`, //取消关注企业
     newsShowList: `${HOST}/api/news/showList`, //收购或出售列表
