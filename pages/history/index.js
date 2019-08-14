@@ -31,11 +31,11 @@ Page({
       method: 'POST',
       success: res => {
         let search = this.data.search;
-        secarch.pagenum += 1;
+        search.pagenum += 1;
         if (res.data.list.length) {
           this.setData({
-            list: res.data,
-            secarch
+            list: res.data.list,
+            search
           })
         }
       },

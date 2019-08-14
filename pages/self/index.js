@@ -20,7 +20,7 @@ Page({
   },
   gotoidentify(e) {
     console.log(e)
-    let type = e.target.dataset.type;
+    let type = e.currentTarget.dataset.type;
     console.log(type)
     wx.navigateTo({
       url: `../identify/index?type=${type}`,

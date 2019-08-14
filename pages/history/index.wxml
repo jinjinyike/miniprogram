@@ -2,24 +2,18 @@
 <import src='../../template/top.wxml' />
 
 <view class="pro">
-  <view class='list'>
-    <view>收购硅锰合金1000吨,联系电话:1333333 3333
+    <view wx:if='{{list.length>0}}'>
+      <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
+        <view>{{item.name}}</view>
+        <view>
+          <template is='top' wx:if='{{item.is_top}}' />
+          <text>{{item.link_name}}</text>
+          <text>{{item.address}}</text>
+          <text>{{item.updated}}</text>
+        </view>
+      </view>
     </view>
-    <view>
-      <template is='top' />
-      <text>路人甲</text>
-      <text>安阳</text>
-      <text>2天前</text>
-    </view>
-  </view>
-  <view class='list'>
-    <view>收购硅锰合金1000吨,联系电话:1333333 3333
-    </view>
-    <view>
-      <template is='top' />
-      <text>路人甲</text>
-      <text>安阳</text>
-      <text>2天前</text>
+    <view wx:else class="no-more">
+      <image alt='无数据' src='../../img/icons/no.png'></image>
     </view>
   </view>
-</view>

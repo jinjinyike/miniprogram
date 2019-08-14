@@ -25,7 +25,7 @@ Page({
     objectArray1: [],
     id: '',
     info: {
-      name: '1111'
+      name: ''
     }
   },
 
@@ -121,9 +121,16 @@ Page({
       },
       method: 'POST',
       success: res => {
-        wx.showToast({
-          title: value ? '关注成功' : '取消关注成功',
-        })
+        if (res.code == 0) {
+          wx.showToast({
+            title: value ? '关注成功' : '取消关注成功',
+          })
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
       },
     })
   },

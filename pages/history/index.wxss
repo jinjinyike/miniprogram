@@ -1,1 +1,2 @@
 /* pages/history/index.wxss */
+@import "../../template/search.wxss";

@@ -37,3 +37,7 @@
   position: static;
   flex: auto;
 }
+.send::after{
+  border: none!important;
+  width: auto;
+}

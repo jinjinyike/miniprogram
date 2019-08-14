@@ -1,5 +1,6 @@
 const app = getApp();
-
+const moment = require('./moment.min.js');
+const md5 = require('./md5.js')
 /**
  * 封装请求
  * @param {JSONObject} options 请求参数
@@ -23,6 +24,14 @@ const request = (options) => {
       mask: true
     });
   }, typeof options.loading == 'number' ? options.loading : 300) : 0;
+  let obj = {}
+  if (app.globalData.userInfo) {
+    obj = {
+      id: app.globalData.userInfo.id,
+      time: moment().unix()
+    }
+    obj.crfs = md5(`${obj.time}company${obj.id}`)
+  }
   return wx.request({
     method: options.method || 'GET',
     dataType: options.dataType || 'json',
@@ -31,7 +40,7 @@ const request = (options) => {
     header: {
       'content-type': options.contentType || 'application/json',
       ...options.header,
-      id: app.globalData.userInfo ? app.globalData.userInfo.id : ''
+      ...obj
     },
     success: function(res) {
       if (res.data.code === 10004) {

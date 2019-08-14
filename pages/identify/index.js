@@ -1,5 +1,7 @@
 // pages/identify/index.js
 const app = getApp();
+const moment =require('../../utils/moment.min.js');
+const md5=require('../../utils/md5.js')
 const request = require('../../utils/request');
 import {
   API,
@@ -29,6 +31,7 @@ Page({
     this.setData({
       type
     })
+    
     if (type != 1) {
       request({
         url: type == 3 ? API.identity : API.business,
@@ -37,7 +40,7 @@ Page({
         },
         method: 'POST',
         success: res => {
-          if (res.data) {
+          if (res.data.name) {
             this.setData({
               show: true
             })
@@ -72,12 +75,19 @@ Page({
       title: `请选择${type == 2 ? '营业执照照片' :'身份证照片'}`,
       icon: 'none'
     })
-
+    let obj = {}
+    if (app.globalData.userInfo) {
+      obj = {
+        id: app.globalData.userInfo.id,
+        time: moment().unix()
+      }
+      obj.crfs = md5(`${obj.time}company${obj.id}`)
+    }
     wx.uploadFile({
       url: type == 2 ? API.businessAdd : API.identityAdd, //仅为示例，非真实的接口地址
       filePath: img,
       header: {
-        id: app.globalData.userInfo ? app.globalData.userInfo.id : ''
+        ...obj
       },
       name: type == 2 ? 'business_license' : 'identity_card',
       formData: {

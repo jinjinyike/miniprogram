@@ -7,7 +7,7 @@
     <view class='item'>
       <text>发布类型：</text>
       <!-- <template wx:if='{{!id}}'> -->
-      <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name' >
+      <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
         <view class="picker">
           {{objectArray[index].name}}
         </view>
@@ -43,7 +43,7 @@
     <view class='item'>
       <text>地址：</text>
       <input name='address' wx:if='{{!id}}'></input>
-      <text wx:else>{{info.analysis}}</text>
+      <text wx:else>{{info.address}}</text>
     </view>
     <view class='item'>
       <text>联系人：</text>
@@ -57,7 +57,7 @@
     </view>
     <view class='item'>
       <text>{{id?'添加关注':'消息置顶'}}：</text>
-      <switch name='is_top' bindchange="switchChange" />
+      <switch name='is_top' checked="{{info.is_concern==1?true: false}}" bindchange="switchChange" />
     </view>
   </form>
 
