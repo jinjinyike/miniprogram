@@ -114,6 +114,7 @@ Page({
     } = this.data;
     if (!id) return
     let value = e.detail.value;
+    console.log(API.delConcernNews)
     request({
       url: value ? API.concernNews : API.delConcernNews,
       data: {

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/buy/index",
     "pages/first/index",
+    "pages/buy/index",
     "pages/company/index",
     "pages/overtime/index",
     "pages/companyinfo/index",

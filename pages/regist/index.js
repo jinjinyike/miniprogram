@@ -1,5 +1,6 @@
 const app = getApp();
 const request = require('../../utils/request');
+const moment = require('../../utils/moment.min.js')
 import {
   API,
   HOST
@@ -100,20 +101,34 @@ Page({
       data: obj,
       method: 'POST',
       success: res => {
-        console.log(res)
-        console.log(type == 1)
+        if(res.code!=0){
+         return wx.showToast({
+            title: res.msg,
+            icon:'none'
+          })
+        }
         if (type == 1) {
-          app.globalData.userInfo=res.data;
+          app.globalData.userInfo = res.data;
           wx.setStorage({
             key: 'userInfo',
             data: JSON.stringify(res.data),
           })
-          wx.switchTab({
-            url: '../company/index',
-          })
+          console.log(moment().isBefore(res.data.show_expire_time))
+          console.log(moment())
+          if (moment().isBefore(res.data.show_expire_time)) {
+            wx.switchTab({
+              url: '../company/index',
+            })
+
+          } else {
+            wx.navigateTo({
+              url: '../fail/index?type=1',
+            })
+          }
+
         } else {
           wx.navigateTo({
-            url: '../identify/index',
+            url: '../identify/index?type=1',
           })
         }
 

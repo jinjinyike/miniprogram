@@ -25,7 +25,7 @@ module.exports = {
     newsAdd: `${HOST}/api/news/create`, //出售或者收购发布
     newsInfo: `${HOST}/api/news/info`, //出售或者收购详情
     concernNews: `${HOST}/api/news/concern`, //关注出售或者收购
-    delconcernNews: `${HOST}/api/news/delConcern`, //取消关注出售或者收购
+    delConcernNews: `${HOST}/api/news/delConcern`, //取消关注出售或者收购
     labelList: `${HOST}/api/label/showList`, //取消关注出售或者收购
     chargeList: `${HOST}/api/pay/charge`, //套餐列表
   }

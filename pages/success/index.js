@@ -5,18 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: '1', //1注册成功
+    type: 1, //1注册成功
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options)
+    if (options.type) {
+      this.setData({
+        type: options.type
+      })
+    }
 
   },
-  goto(){
+  goto() {
     wx.redirectTo({
-      url: '../self/index',
+      url: '../regist/index?type=1',
     })
   },
   /**

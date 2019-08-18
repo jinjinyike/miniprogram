@@ -1,7 +1,7 @@
 // pages/identify/index.js
 const app = getApp();
-const moment =require('../../utils/moment.min.js');
-const md5=require('../../utils/md5.js')
+const moment = require('../../utils/moment.min.js');
+const md5 = require('../../utils/md5.js')
 const request = require('../../utils/request');
 import {
   API,
@@ -31,7 +31,7 @@ Page({
     this.setData({
       type
     })
-    
+
     if (type != 1) {
       request({
         url: type == 3 ? API.identity : API.business,
@@ -40,9 +40,18 @@ Page({
         },
         method: 'POST',
         success: res => {
-          if (res.data.name) {
+          if (res.data && type == 3) {
             this.setData({
-              show: true
+              show: true,
+              name: res.data.name,
+              img: HOST + res.data.identity_card
+            })
+          }
+          if (res.data && type == 2 && res.data.company_name) {
+            this.setData({
+              show: true,
+              name: res.data.company_name,
+              img: HOST+res.data.business_license
             })
           }
         },
@@ -50,7 +59,6 @@ Page({
     }
   },
   upload() {
-    console.log(111)
     if (this.data.show) return
     wx.chooseImage({
       success: res => {
@@ -95,7 +103,7 @@ Page({
       },
       success: res => {
         console.log(res.data)
-        if (res.data.code == 0) {
+        if (res.code == 0) {
           if (type == 1) {
             wx.redirectTo({
               url: '../success/index?type=1',
@@ -112,6 +120,12 @@ Page({
             icon: 'none'
           })
         }
+      },
+      fail:err=>{
+        wx.showToast({
+          title: '认证失败',
+          icon:'none'
+        })
       }
     })
   },

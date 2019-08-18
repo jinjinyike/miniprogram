@@ -1,14 +1,20 @@
 <!--pages/fail/index.wxml-->
-<import src='../../template/welcomText.wxml' />
-<import src='../../template/fail.wxml' />
+<import src='../../template/continue.wxml' />
 
 <view class="con">
-  <template is='fail' />
-  <view class='mtext'>
+  <template wx:if='{{type==1}}' is='continue' />
+  <template wx:else is='fail' />
+  <view wx:if='{{type==1}}' class='mtext'>
+    <view>您的使用时间已到期!
+    </view>
+    <view>请续费后继续使用
+    </view>
+  </view>
+  <view wx:else class='mtext'>
     <view>支付失败!
     </view>
     <view>请保持网络稳定
     </view>
   </view>
-  <button class='btn'>重新支付</button>
+  <button class='btn' bindtap="goto">{{type==1?'续费使用':'重新支付'}}</button>
 </view>

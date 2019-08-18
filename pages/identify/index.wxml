@@ -3,7 +3,7 @@
   <view class='con-body'>
     <view class='row'>
       <text>{{type==2?'企业名称':'姓名'}}：</text>
-      <input type="text" maxlength='10' placeholder='请输入' bindinput='bindinput' />
+      <input type="text"  placeholder='请输入' bindinput='bindinput' value='{{name}}'/>
     </view>
     <view class='rowtext'>{{type==2?'营业执照照片':'身份证照片'}}</view>
     <view class='upload' bindtap='upload'>
