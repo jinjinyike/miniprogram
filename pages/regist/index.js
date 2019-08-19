@@ -101,10 +101,10 @@ Page({
       data: obj,
       method: 'POST',
       success: res => {
-        if(res.code!=0){
-         return wx.showToast({
+        if (res.code != 0) {
+          return wx.showToast({
             title: res.msg,
-            icon:'none'
+            icon: 'none'
           })
         }
         if (type == 1) {
@@ -113,25 +113,32 @@ Page({
             key: 'userInfo',
             data: JSON.stringify(res.data),
           })
-          console.log(moment().isBefore(res.data.show_expire_time))
-          console.log(moment())
           if (moment().isBefore(res.data.show_expire_time)) {
+            //正常登录
             wx.switchTab({
-              url: '../company/index',
+              url: '../self/index',
             })
 
           } else {
+            //使用期限已到
             wx.navigateTo({
               url: '../fail/index?type=1',
             })
           }
 
-        } else {
+        }
+        if (type == 2) {
+          //注册
+          app.globalData.userInfo = res.data;
+          wx.setStorage({
+            key: 'userInfo',
+            data: JSON.stringify(res.data),
+          })
+          //注册——身份验证
           wx.navigateTo({
             url: '../identify/index?type=1',
           })
         }
-
       }
     })
   },

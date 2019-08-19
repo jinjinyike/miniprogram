@@ -105,10 +105,12 @@ Page({
         console.log(res.data)
         if (res.code == 0) {
           if (type == 1) {
+            //注册成功
             wx.redirectTo({
               url: '../success/index?type=1',
             })
           } else {
+            //验证成功
             wx.switchTab({
               url: '../self/index',
             })

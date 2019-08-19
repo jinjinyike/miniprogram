@@ -22,7 +22,7 @@ Page({
   },
   goto() {
     wx.redirectTo({
-      url: '../regist/index?type=1',
+      url: '../self/index',
     })
   },
   /**
