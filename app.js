@@ -5,15 +5,16 @@ import {
 const moment = require('./utils/moment.min.js');
 App({
   onLaunch() {
-    wx.getStorage({
-      key: 'userInfo',
-      success: res => {
-        console.log(res)
-        if (!this.globalData.userInfo) {
-          this.globalData.userInfo = JSON.parse(res.data)
-        }
-      },
-    })
+    //测试用的
+    // wx.getStorage({
+    //   key: 'userInfo',
+    //   success: res => {
+    //     console.log(res)
+    //     if (!this.globalData.userInfo) {
+    //       this.globalData.userInfo = JSON.parse(res.data)
+    //     }
+    //   },
+    // })
 
   },
   updateGlobal(data, page) {
