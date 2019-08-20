@@ -3,6 +3,7 @@
 .con{
   padding-top: 150rpx;
   text-align: center;
+  overflow-y: hidden;
 }
 .mtext{
   margin: 64rpx 0 70rpx 0;

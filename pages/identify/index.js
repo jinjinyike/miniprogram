@@ -103,7 +103,9 @@ Page({
       },
       success: res => {
         console.log(res.data)
-        if (res.code == 0) {
+        console.log(JSON.parse(res.data))
+        let _res = JSON.parse(res.data)
+        if (_res.code == 0) {
           if (type == 1) {
             //注册成功
             wx.redirectTo({

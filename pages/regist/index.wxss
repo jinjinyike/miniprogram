@@ -1,6 +1,7 @@
 /* pages/regist/index.wxss */
 .con{
   padding: 0 20rpx;
+  overflow-y: hidden;
 }
 .con-body{
   margin-top: 170rpx;

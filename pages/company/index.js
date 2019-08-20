@@ -10,22 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [{
-      name: '阿拉善xx有限公司',
-      id: 1,
-      type: '钢铁企业',
-      is_top: true
-    }, {
-      name: '阿拉善xx有限公司',
-      id: 2,
-      type: '钢铁企业',
-      is_top: true
-    }, {
-      name: '阿拉善xx有限公司',
-      id: 3,
-      type: '钢铁企业',
-      is_top: false
-    }],
+    list: [],
     moldArr: [{
       id: 'a',
       name: '关注'
@@ -145,7 +130,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    let {
+      search
+    } = this.data
+    search.pagenum = 1;
+    this.setData({
+      search,
+      list: []
+    }, _ => {
+      this.getList()
+    })
   },
 
   /**

@@ -8,7 +8,7 @@
     </view>
     <view class='row' wx:if='{{type==2}}'>
       <text>验证码：</text>
-      <input bindinput='bindinput' type="number" maxlength='4' placeholder='输入验证码' data-key='verify' />
+      <input bindinput='bindinput' type="number" maxlength='6' placeholder='输入验证码' data-key='verify' />
     </view>
     <view class='text-center'>
       <image src='../../img/icons/text.png' alt='logotext' class='logotext'></image>

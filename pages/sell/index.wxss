@@ -1,1 +1,2 @@
-/* pages/sell/index.wxss */
+/* pages/sell/index.wxss *//* pages/buy/index.wxss */
+@import "../../template/search.wxss";

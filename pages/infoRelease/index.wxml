@@ -7,7 +7,7 @@
     <view class='item'>
       <text>发布类型：</text>
       <!-- <template wx:if='{{!id}}'> -->
-      <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
+      <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name' data-key='index'>
         <view class="picker">
           {{objectArray[index].name}}
         </view>
@@ -25,7 +25,7 @@
       <text>标签：</text>
       <picker name='label' wx:if='{{!id}}' bindchange="bindPickerChange" value="{{idx}}" range="{{objectArray1}}" range-key='name' data-key='idx'>
         <view class="picker">
-          {{objectArray1[index].name}}
+          {{objectArray1[idx].name}}
         </view>
       </picker>
       <text wx:else>{{info.label}}</text>

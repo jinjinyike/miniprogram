@@ -69,6 +69,18 @@ Page({
         break
       }
     }
+    if (!(/^1[3456789]\d{9}$/.test(obj.link_phone))) {
+      return wx.showToast({
+        title: '请输入正确的手机号码',
+        icon: 'none'
+      })
+    }
+    if (!(/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(obj.link_email))) {
+      return wx.showToast({
+        title: '请输入正确的邮箱',
+        icon: 'none'
+      })
+    }
     obj.user_id = app.globalData.userInfo.id;
     request({
       url: API.releaseCompany,

@@ -21,7 +21,7 @@ Page({
 
   },
   goto() {
-    wx.redirectTo({
+    wx.switchTab({
       url: '../self/index',
     })
   },
