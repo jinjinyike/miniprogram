@@ -20,6 +20,7 @@
 .row input{
   flex: 1;
   margin-left: 10rpx;
+  padding-right: 20rpx;
 }
 .getcode{
   width: 250rpx;
@@ -28,6 +29,7 @@
   background: #f4f5f6;
   text-align: center;
   font-size: 34rpx;
+  z-index: 20;
 }
 .text-center{
   text-align: center;

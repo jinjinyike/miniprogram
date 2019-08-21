@@ -23,7 +23,7 @@ Page({
   onLoad: function(options) {
     console.log(options)
     wx.setNavigationBarTitle({
-      title: options.type == 1 ? '手机登录' : '手机注册',
+      title: options.type == 1 ? '手机登录' : '手机注册测试',
     })
     this.setData({
       type: options.type
@@ -36,7 +36,6 @@ Page({
     })
   },
   getCode() {
-    var _this = this;
     if (this.data.btntext !== '获取验证码') return wx.showToast({
       title: '请稍后再试',
       icon: 'none'
@@ -47,6 +46,11 @@ Page({
         icon: 'none'
       })
     }
+    wx.showToast({
+      title: '点击了1',
+      icon: 'none'
+    })
+    console.warn('请求前')
     request({
       url: API.getCode,
       data: {
@@ -55,18 +59,30 @@ Page({
       method: 'POST',
       loading: false,
       success: res => {
-        var coden = 60 // 定义60秒的倒计时
-        var codeV = setInterval(function() {
-          _this.setData({ // _this这里的作用域不同了
-            btntext: (--coden) + 's'
-          })
-          if (coden == -1) { // 清除setInterval倒计时，这里可以做很多操作，按钮变回原样等
-            clearInterval(codeV)
-            _this.setData({
-              btntext: '获取验证码'
+        console.warn('请求后')
+        console.warn(res)
+        console.warn('请求结果上')
+        if (!res.code) {
+          let _this = this;
+          let coden = 60 // 定义60秒的倒计时
+          let codeV = setInterval(function() {
+            _this.setData({ // _this这里的作用域不同了
+              btntext: (--coden) + 's'
             })
-          }
-        }, 1000) //  1000是1秒
+            if (coden == -1) { // 清除setInterval倒计时，这里可以做很多操作，按钮变回原样等
+              clearInterval(codeV)
+              _this.setData({
+                btntext: '获取验证码'
+              })
+            }
+          }, 1000) //  1000是1秒
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
+
       },
       // fail: function(res) {},
       // complete: function(res) {},
@@ -101,7 +117,7 @@ Page({
       data: obj,
       method: 'POST',
       success: res => {
-        if (res.code != 0) {
+        if (res.code !== 0) {
           return wx.showToast({
             title: res.msg,
             icon: 'none'

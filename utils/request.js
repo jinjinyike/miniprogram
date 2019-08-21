@@ -18,7 +18,7 @@ const md5 = require('./md5.js')
  }
  */
 const request = (options) => {
-  const loading = options.loading == null || options.loading ? setTimeout(() => {
+  const loading = options.loading ? setTimeout(() => {
     wx.showLoading({
       title: '数据加载中...',
       mask: true
@@ -55,8 +55,10 @@ const request = (options) => {
       console.error(res.data)
     },
     complete: function() {
-      clearTimeout(loading);
-      wx.hideLoading();
+      if (options.loading) {
+        clearTimeout(loading);
+        wx.hideLoading();
+      }
     }
   });
 }
