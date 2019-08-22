@@ -52,6 +52,10 @@ const request = (options) => {
       }
     },
     fail: function() {
+      wx.showToast({
+        title: '请求失败',
+        icon:'none'
+      })
       console.error(res.data)
     },
     complete: function() {

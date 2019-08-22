@@ -8,9 +8,11 @@
       <text>发布类型：</text>
       <!-- <template wx:if='{{!id}}'> -->
       <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name' data-key='index'>
-        <view class="picker">
+        <view class="picker" wx:if='{{!id}}'>
           {{objectArray[index].name}}
         </view>
+        <text wx:else>{{info.type==2?'收购':'出售'}}</text>
+
       </picker>
       <!-- </template> -->
 
