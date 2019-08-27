@@ -5,6 +5,11 @@ import {
 const moment = require('./utils/moment.min.js');
 App({
   onLaunch() {
+    wx.login({
+      success:res=> {
+        this.globalData.code = res.code
+      }
+    })
     //测试用的
     // wx.getStorage({
     //   key: 'userInfo',
@@ -32,6 +37,7 @@ App({
     statusBarHeight: 20,
     userInfo: null,
     token: null,
-    getCurrent: true
+    getCurrent: true,
+    code: ''
   }
 })
