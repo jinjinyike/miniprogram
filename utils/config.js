@@ -1,4 +1,4 @@
-const HOST = 'http://www.haixm.cn';
+const HOST = 'https://www.haixm.cn';
 
 module.exports = {
   HOST,
@@ -28,5 +28,6 @@ module.exports = {
     delConcernNews: `${HOST}/api/news/delConcern`, //取消关注出售或者收购
     labelList: `${HOST}/api/label/showList`, //取消关注出售或者收购
     chargeList: `${HOST}/api/pay/charge`, //套餐列表
+    applyWxpay: `${HOST}/api/pay/applyWxpay`, //套餐列表
   }
 }

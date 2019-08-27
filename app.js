@@ -11,15 +11,15 @@ App({
       }
     })
     //测试用的
-    // wx.getStorage({
-    //   key: 'userInfo',
-    //   success: res => {
-    //     console.log(res)
-    //     if (!this.globalData.userInfo) {
-    //       this.globalData.userInfo = JSON.parse(res.data)
-    //     }
-    //   },
-    // })
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        console.log(res)
+        if (!this.globalData.userInfo) {
+          this.globalData.userInfo = JSON.parse(res.data)
+        }
+      },
+    })
 
   },
   updateGlobal(data, page) {

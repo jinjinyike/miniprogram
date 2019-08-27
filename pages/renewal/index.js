@@ -1,5 +1,7 @@
 // pages/renewal/index.js
 const request = require('../../utils/request.js')
+const app = getApp();
+
 import {
   API,
   HOST
@@ -43,21 +45,37 @@ Page({
     })
   },
   pay() {
-    if (!this.data.lookId && !this.data.topId) {
-      return wx.showToast({
-        title: '未选择充值项',
-        icon: 'none'
-      })
-    }
-    wx.requestPayment({
-      timeStamp: '',
-      nonceStr: '',
-      package: '',
-      signType: 'MD5',
-      paySign: '',
-      success(res) { },
-      fail(res) { }
+    // if (!this.data.lookId && !this.data.topId) {
+    //   return wx.showToast({
+    //     title: '未选择充值项',
+    //     icon: 'none'
+    //   })
+    // }
+    wx.login({
+      success: res => {
+        console.log(res)
+        // this.globalData.code = res.code
+        request({
+          url: API.applyWxpay,
+          data: {code:res.code,id:app.globalData.userInfo.id},
+          method: 'POST',
+          success: (res)=> {
+
+          },
+          fail: function(res) {},
+          complete: function(res) {},
+        })
+      }
     })
+    // wx.requestPayment({
+    //   timeStamp: '',
+    //   nonceStr: '',
+    //   package: '',
+    //   signType: 'MD5',
+    //   paySign: '',
+    //   success(res) { },
+    //   fail(res) { }
+    // })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
