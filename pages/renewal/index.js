@@ -53,29 +53,35 @@ Page({
     // }
     wx.login({
       success: res => {
-        console.log(res)
-        // this.globalData.code = res.code
         request({
           url: API.applyWxpay,
-          data: {code:res.code,id:app.globalData.userInfo.id},
+          data: {
+            code: res.code,
+            id: app.globalData.userInfo.id,
+            or_id: '4'
+          },
           method: 'POST',
-          success: (res)=> {
-
+          success: (res) => {
+            console.log(JSON.parse(res.msg))
+            let data = JSON.parse(res.msg)
+            wx.requestPayment({
+              timeStamp: data.timeStamp,
+              nonceStr: data.nonceStr,
+              package: data.package,
+              signType: 'MD5',
+              paySign: data.paySign,
+              success(res) {
+                console.log(1211)
+              },
+              fail(res) {}
+            })
           },
           fail: function(res) {},
           complete: function(res) {},
         })
       }
     })
-    // wx.requestPayment({
-    //   timeStamp: '',
-    //   nonceStr: '',
-    //   package: '',
-    //   signType: 'MD5',
-    //   paySign: '',
-    //   success(res) { },
-    //   fail(res) { }
-    // })
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
