@@ -72,8 +72,15 @@ Page({
               paySign: data.paySign,
               success(res) {
                 console.log(1211)
+                wx.navigateTo({
+                  url: '../success/index?type=2',
+                })
               },
-              fail(res) {}
+              fail(res) {
+                wx.navigateTo({
+                  url: '../fail/index?type=2',
+                })
+              }
             })
           },
           fail: function(res) {},

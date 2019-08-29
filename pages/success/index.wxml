@@ -11,6 +11,7 @@
       <view>您可试用5日,5日后需续费使用
       </view>
     </view>
+    <view wx:else>支付成功</view>
   </view>
   <view>
     <template is='welcome'></template>
