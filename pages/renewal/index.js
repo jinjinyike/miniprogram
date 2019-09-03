@@ -14,8 +14,8 @@ Page({
   data: {
     lookArr: [],
     topArr: [],
-    lookId: undefined,
-    topId: undefined,
+    lookId: null,
+    topId: null,
   },
 
   /**
@@ -40,30 +40,55 @@ Page({
       id,
       type
     } = e.currentTarget.dataset;
+    let _id;
+    _id = this.data[type] == id ? null : id
     this.setData({
-      [type]: id
+      [type]: _id
     })
   },
   pay() {
-    // if (!this.data.lookId && !this.data.topId) {
-    //   return wx.showToast({
-    //     title: '未选择充值项',
-    //     icon: 'none'
-    //   })
-    // }
+    if (this.data.lookId==null && this.data.topId==null) {
+      return wx.showToast({
+        title: '未选择充值项',
+        icon: 'none'
+      })
+    }
+    if (this.data.lookId!=null && this.data.topId!=null) {
+      return wx.showToast({
+        title: '只能选择一项充值项',
+        icon: 'none'
+      })
+    }
+    let {
+      lookId,
+      topId
+    } = this.data;
+    let obj = {}
+    if (lookId!=null) {
+      obj = {
+        id: this.data.lookArr[lookId].id,
+        time: this.data.lookArr[lookId].time,
+        amount: this.data.lookArr[lookId].amount
+      }
+    } else {
+      obj = {
+        id: this.data.topArr[topId].id,
+        time: this.data.topArr[topId].time,
+        amount: this.data.topArr[topId].amount
+      }
+    }
+    obj.amount=0.01;//ceshi
     wx.login({
       success: res => {
         request({
-          url: API.applyWxpay,
+          url: API.payOrder,
           data: {
             code: res.code,
-            id: app.globalData.userInfo.id,
-            or_id: '4'
+            ...obj
           },
           method: 'POST',
           success: (res) => {
-            console.log(JSON.parse(res.msg))
-            let data = JSON.parse(res.msg)
+            let data = JSON.parse(res.data)
             wx.requestPayment({
               timeStamp: data.timeStamp,
               nonceStr: data.nonceStr,
@@ -77,9 +102,13 @@ Page({
                 })
               },
               fail(res) {
-                wx.navigateTo({
-                  url: '../fail/index?type=2',
+                wx.showToast({
+                  title: '支付失败',
+                  icon: 'none'
                 })
+                // wx.navigateTo({
+                //   url: '../fail/index?type=2',
+                // })
               }
             })
           },

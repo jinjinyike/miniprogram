@@ -1,5 +1,6 @@
 <!--pages/fail/index.wxml-->
 <import src='../../template/continue.wxml' />
+<import src='../../template/fail.wxml' />
 
 <view class="con">
   <template wx:if='{{type==1}}' is='continue' />

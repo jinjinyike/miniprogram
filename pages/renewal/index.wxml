@@ -3,7 +3,7 @@
   <view class="item">
     <text class="item-info">浏览付费</text>
     <view class="item-list">
-      <view class="{{item.id==lookId?'card active':'card'}}" wx:for='{{lookArr}}' data-id='{{item.id}}' data-type='lookId' bindtap="changeId" wx:key='{{item.id}}'>
+      <view class="{{index==lookId?'card active':'card'}}" wx:for='{{lookArr}}' data-id='{{index}}' data-type='lookId' bindtap="changeId" wx:key='{{item.id}}'>
         <text class="text-month">{{item.time}}个月</text>
         <text class="text-money"><text class="text-money-flag">¥ </text>{{item.amount}}</text>
         <text class="text-info">{{item.desc}}</text>
@@ -11,7 +11,7 @@
     </view>
     <text class="item-info">顶置特权</text>
     <view class="item-list">
-      <view class="{{item.id==topId?'card active':'card'}}" wx:for='{{lookArr}}' data-id='{{item.id}}' data-type='topId' bindtap="changeId" wx:key='{{item.id}}'>
+      <view class="{{index==topId?'card active':'card'}}" wx:for='{{topArr}}' data-id='{{index}}' data-type='topId' bindtap="changeId" wx:key='{{item.id}}'>
         <text class="text-month">{{item.time}}个月</text>
         <text class="text-money"><text class="text-money-flag">¥ </text>{{item.amount}}</text>
         <text class="text-info">{{item.desc}}</text>
