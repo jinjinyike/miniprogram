@@ -54,7 +54,7 @@ const request = (options) => {
     fail: function() {
       wx.showToast({
         title: '请求失败',
-        icon:'none'
+        icon: 'none'
       })
       console.error(res.data)
     },
@@ -63,6 +63,8 @@ const request = (options) => {
         clearTimeout(loading);
         wx.hideLoading();
       }
+      typeof options.complete === 'function' && options.complete.call(this);
+
     }
   });
 }

@@ -33,7 +33,7 @@ Page({
    */
   onLoad: function(options) {
     this.getkeys()
-    this.getList()
+    // this.getList()
   },
   getkeys() {
     request({
@@ -74,6 +74,9 @@ Page({
         mold = 3;
         break
     }
+    wx.showLoading({
+      title: '数据加载中...',
+    })
     request({
       url: API.newsShowList,
       data: {
@@ -81,6 +84,7 @@ Page({
         mold
       },
       method: 'POST',
+      // loading:true,
       success: res => {
         if (res.data.length == 0) return
         obj.pagenum += 1;
@@ -90,6 +94,9 @@ Page({
         })
       },
       fail: function(res) {},
+      complete:function(){
+        wx.hideLoading()
+      }
     })
   },
   // 切换label

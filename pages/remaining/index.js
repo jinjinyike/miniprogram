@@ -1,6 +1,6 @@
 // pages/remaining/index.js
 const app = getApp();
-const moment =require('../../utils/moment.min.js')
+const moment = require('../../utils/moment.min.js')
 const request = require('../../utils/request');
 import {
   API,
@@ -20,22 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    request({
-      url: API.expire,
-      data: {
-        id: app.globalData.userInfo.id
-      },
-      method: 'POST',
-      success: res => {
-        if (res.data) {
-          this.setData({ ...res.data,
-            expire_day: moment(res.data.show_expire_time).diff(moment(), 'days'),
-            top_day: moment(res.data.top_expire_time).diff(moment(), 'days')
-          }
-          )
-        }
-      },
-    })
+
   },
   gotopay() {
     wx.navigateTo({
@@ -53,7 +38,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    request({
+      url: API.expire,
+      data: {
+        id: app.globalData.userInfo.id
+      },
+      method: 'POST',
+      success: res => {
+        if (res.data) {
+          this.setData({
+            ...res.data,
+            expire_day: moment(res.data.show_expire_time).diff(moment(), 'days'),
+            top_day: moment(res.data.top_expire_time).diff(moment(), 'days')
+          })
+        }
+      },
+    })
   },
 
   /**
