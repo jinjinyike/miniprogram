@@ -47,13 +47,13 @@ Page({
     })
   },
   pay() {
-    if (this.data.lookId==null && this.data.topId==null) {
+    if (this.data.lookId == null && this.data.topId == null) {
       return wx.showToast({
         title: '未选择充值项',
         icon: 'none'
       })
     }
-    if (this.data.lookId!=null && this.data.topId!=null) {
+    if (this.data.lookId != null && this.data.topId != null) {
       return wx.showToast({
         title: '只能选择一项充值项',
         icon: 'none'
@@ -64,7 +64,7 @@ Page({
       topId
     } = this.data;
     let obj = {}
-    if (lookId!=null) {
+    if (lookId != null) {
       obj = {
         id: this.data.lookArr[lookId].id,
         time: this.data.lookArr[lookId].time,
@@ -77,7 +77,7 @@ Page({
         amount: this.data.topArr[topId].amount
       }
     }
-    obj.amount=0.01;//ceshi
+    obj.amount = 0.01; //ceshi
     wx.login({
       success: res => {
         request({
@@ -88,18 +88,29 @@ Page({
           },
           method: 'POST',
           success: (res) => {
-            let data = JSON.parse(res.data)
+            let data = res.data
+            let _msg=JSON.parse(data.msg)
+            console.log(data)
             wx.requestPayment({
-              timeStamp: data.timeStamp,
-              nonceStr: data.nonceStr,
-              package: data.package,
+              timeStamp: _msg.timeStamp,
+              nonceStr: _msg.nonceStr,
+              package: _msg.package,
               signType: 'MD5',
-              paySign: data.paySign,
-              success(res) {
-                console.log(1211)
-                wx.navigateTo({
-                  url: '../success/index?type=2',
+              paySign: _msg.paySign,
+              success: res => {
+                console.log(res)
+                request({
+                  url: API.checkwxPay + data.out_trade_no,
+                  method: 'GET',
+                  success: res => {
+                    wx.navigateTo({
+                      url: '../success/index?type=2',
+                    })
+                  },
+                  fail: function(res) {},
+                  complete: function(res) {},
                 })
+
               },
               fail(res) {
                 wx.showToast({

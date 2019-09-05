@@ -30,6 +30,6 @@ module.exports = {
     chargeList: `${HOST}/api/pay/charge`, //套餐列表
     applyWxpay: `${HOST}/api/pay/applyWxpay`, //支付
     payOrder: `${HOST}/api/pay/order`, //下单
-    
+    checkwxPay: `${HOST}/api/Pay/checkwx_pay/out_trade_no/`, //下单回调
   }
 }
