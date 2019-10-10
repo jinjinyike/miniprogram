@@ -43,10 +43,13 @@ const request = (options) => {
       ...obj
     },
     success: function(res) {
-      if (res.data.code === 10004) {
-        app.getUserInfo(() => {
-          request(options);
-        });
+      if (res.data.code === -1) {
+        // app.getUserInfo(() => {
+        //   request(options);
+        // });
+        wx.redirectTo({
+          url: '../regist/index?type = 1',
+        })
       } else {
         typeof options.success === 'function' && options.success.call(this, res.data, res);
       }
