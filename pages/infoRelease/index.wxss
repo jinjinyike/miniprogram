@@ -24,8 +24,13 @@
   color: #a0a0a0;
   flex: 1;
 }
-
-.send {
+.send{
+  background:#f85959 ;
+  color: #fff;
+  margin-top: 30rpx;
+  border: none;
+}
+/* .send {
   color: #f85959;
   background: transparent;
   border: none;
@@ -40,4 +45,4 @@
 .send::after{
   border: none!important;
   width: auto;
-}
+} */

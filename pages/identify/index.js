@@ -69,6 +69,11 @@ Page({
       }
     })
   },
+  largeImg(){
+    wx.previewImage({
+      urls: [this.data.img],
+    })
+  },
   submit() {
     const {
       img,

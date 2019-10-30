@@ -7,7 +7,7 @@
     </view>
     <view class='rowtext'>{{type==2?'营业执照照片':'身份证照片'}}</view>
     <view class='upload' bindtap='upload'>
-      <image wx:if='{{img}}' src='{{img}}'></image>
+      <image wx:if='{{img}}' src='{{img}}' bindtap='largeImg'></image>
       <text wx:else>+</text>
     </view>
     <button wx:if='{{!show}}' class='btn' bindtap='submit'>提交信息</button>

@@ -6,10 +6,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 77rpx;
-  line-height: 77rpx;
+  height: 85rpx;
+  line-height: 85rpx;
   border-bottom: 1px solid #e8e8e8;
-  font-size: 36rpx;
+  font-size: 38rpx;
 }
 .list image{
   width: 17rpx;

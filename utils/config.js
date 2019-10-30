@@ -1,4 +1,4 @@
-const HOST = 'https://www.haixm.cn';
+const HOST = 'https://zshj.haixm.cn';
 
 module.exports = {
   HOST,

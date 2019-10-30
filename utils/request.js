@@ -44,6 +44,7 @@ const request = (options) => {
     },
     success: function(res) {
       if (res.data.code === -1) {
+        console.log(res)
         // app.getUserInfo(() => {
         //   request(options);
         // });
@@ -59,7 +60,7 @@ const request = (options) => {
         title: '请求失败',
         icon: 'none'
       })
-      console.error(res.data)
+      // console.error(res.data)
     },
     complete: function() {
       if (options.loading) {
