@@ -1,0 +1,34 @@
+
+/* pages/selfDetail/index.wxss */
+page{
+  background: #fff;
+
+}
+.con{
+  padding: 0 30rpx;
+  border-top: 1px solid #eee;
+}
+.con view{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+  padding: 37rpx 0;
+}
+image{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 128rpx;
+}
+.btn{
+  position: fixed;
+  bottom: 73rpx;
+  width: 600rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 36rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

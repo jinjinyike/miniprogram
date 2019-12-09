@@ -1,22 +1,72 @@
 /* pages/remaining/index.wxss */
-.con {
-  text-align: center
-}
-.con-text {
-  margin-top: 300rpx
-}
-.smart-text {
+
+page {
   text-align: center;
-	font-size: 40rpx;
-	font-weight: normal;
-	color: #222222;
-  line-height: 80rpx;
+  position: relative;
+  /* padding-top: 20rpx; */
 }
+.rest-bg{
+  background-color: #D43D3D;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 231rpx;
+  z-index: -1;
+}
+.con-body{
+  margin-top: -200rpx;
+  z-index: 200;
+}
+.self-title {
+  /* margin-top: 14rpx; */
+  color: #fff;
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.con-text {
+  margin-top: 50rpx;
+  padding: 0 32rpx;
+  z-index: 100;
+}
+
+.smart-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  height: 179rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0px 0px 20px 0px rgba(212, 61, 61, 0.16);
+  border-radius: 8px;
+  padding: 39rpx 42rpx;
+  font-size: 28rpx;
+  color: #aaa;
+  background: #fff;
+}
+.smart-text view:nth-of-type(1){
+  display: flex;
+  flex-direction: column;
+}
+.smart-text image{
+  width: 79rpx;
+  height: 79rpx;
+}
+
 .num-text {
-  margin: 0 20rpx;
+  /* margin: 0 20rpx; */
+  font-size: 34rpx;
+  color: #222;
+}
+.special-num{
   font-size: 60rpx;
-	color: #d43d3d;
 }
 .btn-pay {
-  margin-top: 220rpx
+  width: 600rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  margin-top: 220rpx;
 }

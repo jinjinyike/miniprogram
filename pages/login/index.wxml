@@ -1,0 +1,23 @@
+<view class='con'>
+  <image src='../../img/icons/login-bg.jpg' mode='widthFix' class='bg'></image>
+  <image src='../../img/icons/logo-text.png' class='logo'></image>
+  <view class='con-body'>
+    <view class='text-center'>
+    </view>
+    <view class='row'>
+      <text>+86 </text>
+      <input type="number" maxlength='11' placeholder='手机号' bindinput='bindinput' data-key='phone' />
+      <view wx:if='{{type==2}}' class='getcode' bindtap='getCode'>{{btntext}}</view>
+    </view>
+    <view class='row' wx:if='{{type==2}}'>
+      <text>验证码：</text>
+      <input bindinput='bindinput' type="number" maxlength='6' placeholder='输入验证码' data-key='verify' />
+    </view>
+    <button class='next' bindtap='submit'>{{type==2?'注册':'登录'}}</button>
+    <view class='register'  bindtap='gotoregister'>{{type==2?"返回登录":"注册"}}</view>
+  </view>
+  <view class='fixed-view'>
+    <text>丰镇市天元化工有限责任公司丨高碳铬铁</text>
+    <text>郑先生 15648966684  </text>
+  </view>
+</view>

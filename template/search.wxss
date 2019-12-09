@@ -1,52 +1,72 @@
 /* pages/company/index.wxss */
+/* 检索头 */
+page{
+  background: #F3F5F7;
+}
 .header{
-  height: 80rpx;
+  height: 240rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 23rpx;
-  background: #d43d3d;
+  position: relative;
+}
+.search-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .search{
-  height: 65rpx;
+  margin-top: 100rpx;
+  height: 76rpx;
   background: #fff;
   width: 630rpx;
-  border-radius: 10rpx;
+  border-radius: 76rpx;
   padding: 0 0 0 20rpx;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .search input{
-  height: 65rpx;
+  height: 76rpx;
+  color: #BBBBBB;
 }
 .search image{
   width: 32rpx;
   height: 32rpx;
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.plus{
+/* .plus{
   width: 38rpx;
   height: 57rpx;
-}
+} */
+/* 滑动tab */
 .scroll-con{
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .scroll{
   width: 670rpx;
-  height:63rpx;
-  line-height: 63rpx;
-  padding-left:  25rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  padding-left:  35rpx;
   white-space: nowrap;
 }
 .scroll text{
+  display: inline-block;
+  height: calc(100% - 3px);
   margin-right: 39rpx;
   color: #222;
-  font-size: 36rpx;
+  font-size: 32rpx;
 }
 .scroll .active{
-  color: #F85959;
+  color: #D43D3D;
+  border-bottom: 2px solid #D43D3D;
 }
 .more{
   border-left: 1px solid #e8e8e8;
@@ -54,7 +74,7 @@
   text-align: center;
 }
 .more image{
-  width:35rpx;
+  width:17rpx;
   height: 30rpx;
 }
 .border{
@@ -67,6 +87,10 @@
   margin-top: 200rpx;
 }
 .no-more image{
-  width: 455rpx;
-  height: 273rpx;
+  width: 288rpx;
+  height: 222rpx;
+}
+.no-more view{
+  color: #999999;
+  font-size: 26rpx;
 }

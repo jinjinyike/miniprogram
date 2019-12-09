@@ -33,23 +33,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if (options.id) {
-      request({
-        url: API.newsInfo,
-        data: {
-          id: options.id
-        },
-        method: 'POST',
-        success: res => {
-          this.setData({
-            id: options.id,
-            info: res.data
-          })
-        },
-      })
-    } else {
-      this.getkeys()
-    }
+    // if (options.id) {
+    //   request({
+    //     url: API.newsInfo,
+    //     data: {
+    //       id: options.id
+    //     },
+    //     method: 'POST',
+    //     success: res => {
+    //       this.setData({
+    //         id: options.id,
+    //         info: res.data
+    //       })
+    //     },
+    //   })
+    // } else {
+      // this.getkeys()
+    // }
   },
   getkeys() {
     request({
@@ -152,7 +152,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.getkeys()
   },
 
   /**

@@ -15,5 +15,6 @@
     </view>
     <view wx:else class="no-more">
       <image alt='无数据' src='../../img/icons/no.png'></image>
+      <view>暂无数据</view>
     </view>
   </view>

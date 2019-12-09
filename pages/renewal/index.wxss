@@ -1,6 +1,16 @@
 /* pages/renewal/index.wxss */
 
 .con {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: -8%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .item-list {
@@ -8,7 +18,7 @@
 }
 
 .item-info {
-  font-size: 36rpx;
+  font-size: 30rpx;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0rpx;
@@ -16,31 +26,36 @@
 }
 
 .item {
-  padding: 24rpx;
+  padding: 20rpx;
+  background: #fff;
+  margin: 32rpx;
+  border-radius: 4px 10px 10px 10px;
 }
 
 .card {
+  position: relative;
   text-align: center;
-  height: 160rpx;
+  /* height: 132rpx; */
   width: 200rpx;
   margin: 24rpx;
   padding: 20rpx 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #a0a0a0;
-  border-radius: 20rpx;
+  border: 1px solid #d43d3d;
+  border-radius: 10rpx;
 }
+
 .active {
-border: 2px solid #f85959;
-background-color: #FFD0D2;
+  border: 2px solid #f85959;
+  background-color: #ffd0d2;
 }
 
 .text-month {
-  font-size: 32rpx;
+  font-size: 26rpx;
   font-weight: normal;
   font-stretch: normal;
-  color: #222;
+  color: #333;
 }
 
 .text-money-flag {
@@ -52,36 +67,61 @@ background-color: #FFD0D2;
 }
 
 .text-money {
-  font-size: 60rpx;
-  font-weight: normal;
-  letter-spacing: 0rpx;
+  font-size: 40rpx;
+  font-weight: bold;
   color: #f85959;
 }
 
 .text-info {
-  font-size: 24rpx;
+  width: 154rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: -15rpx;
+  font-size: 22rpx;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0rpx;
-  color: #a0a0a0;
+  text-align: center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAgCAYAAADqrmEEAAACrklEQVR4nO2cXWoUQRSFz+0uhYAuQPRJRAQf9TW9BpUouAd9CRjJDiLuJCFoyAYkGxDE3oHiAvRJkCs9/VN/t9uJZnxInfMwM11dderWrY+qykxm5PP2toKi/l4/AHwB8BHAOwAn98/OfqZuFRNM/aOuAbgH4DmAQwBt2zRPUkuCRl207gA4bpvmTds09ejtmGZqQ9obbF+DKxq1Ye21TbPTdcE/BqhN6yuA21zRqE3rJoBnBI36H3rkpJK8Hw2fFnZWbrrUenroMIGmHhwJnwIQU7AMRsN6BJUadMPJtHnK8sSrDZaGrwgqZetqvnX+AbaclYAugkrNyD6jzUzExIpmJbNt0nsEtUw5qce9M8punlO15kX6G2tOBEGd7fzSy0k9ZEvFHr36nKpR7rNNUAnqvALQxjphYuKRTLBZAySoBHVBrqplDXh8BdG0JL0gqEt+pYK6OqNJEGjW1gSof5D40giEoKaXpYLqt87RVuPa60BEUJFmN7cvHNQAtLR1wvPKx56EyJagmvGXDqqrXGWY2IOWxKxPuuFOUIcygjoqWtG8icRt0uwEg586IqiLfZQOqhNXfYfienY3M5bc00gEQbViQfGgdm9vfAN60DQbXByZRGVBqqwICKoZum9bFqjdivYJiruIDnbpXFkHPY2CnuoSVII6lfka3RntPYCd3HholiRSZwMnqAR1vg9X1dURgANAb9mN4sn0A1dkVQkqQTVjWW2d0n19fRcqh0CSXFVzDs4XGEGdoisY1OHfhLRb1d5C8SoLLfO2sPUTRFAJqgXq6kP14XJfgS0oXmQ9BJdyjsAIKkEdFb5h+0uAlwA+QOVA+99QgOHiA0uSrjBnmqDGIcW+kfflBdX6rPMYilMBngJ4rMADQLovgV5JEM9e+oFIkheCWjSoAH4DN0oKRG2lVVIAAAAASUVORK5CYII=');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 .pay-list {
   margin-top: 50rpx;
   display: flex;
   justify-content: space-between;
+  height: 106rpx;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-left: none;
+  border-right: none;
 }
+
 .pay-icon {
   width: 64rpx;
   height: 64rpx;
 }
+
 .pay-text {
-  font-size: 36rpx;
-	font-weight: normal;
-	font-stretch: normal;
-	letter-spacing: 0rpx;
-	color: #222222;
+  font-size: 30rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0rpx;
+  color: #333;
 }
+
 .btn-pay {
+  width: 600rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 36rpx;
   letter-spacing: 5rpx;
-  margin-top: 150rpx;
+  margin-top: 180rpx;
+  margin-bottom: 54rpx;
 }

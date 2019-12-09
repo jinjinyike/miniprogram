@@ -1,0 +1,72 @@
+/* pages/infoDetail/index.wxss */
+
+page {
+  background: #fff;
+}
+
+.con {
+  padding: 36rpx;
+}
+
+.title {
+  color: #222;
+  font-size: 42rpx;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 43rpx;
+  font-size: 28rpx;
+}
+
+.info image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 15rpx;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.self {
+  flex-direction: column;
+  color: #999;
+}
+
+.self view:nth-of-type(1) {
+  color: #222;
+}
+
+.care {
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #fff;
+  background: #f34f4f;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+}
+
+.list {
+  border: 2px solid rgba(243, 245, 247, 1);
+  border-radius: 10rpx;
+  margin-top: 46rpx;
+  padding: 36rpx;
+}
+
+.list view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 34rpx;
+  color: #666;
+  height: 60rpx;
+}
+.list view text:nth-of-type(2){
+  color: #222;
+}

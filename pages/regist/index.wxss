@@ -4,7 +4,12 @@
   overflow-y: hidden;
 }
 .con-body{
-  margin-top: 170rpx;
+  margin-top: 110rpx;
+}
+.logo{
+  width: 562rpx;
+  height: 132rpx;
+  margin-top: 60rpx;
 }
 .title{
   font-size: 48rpx;
@@ -40,7 +45,10 @@
   margin-top: 78rpx;
 }
 .next{
-  width: 96rpx;
-  height: 80rpx;
-  margin-top: 60rpx;
+  /* width: 96rpx;
+  height: 80rpx; */
+  background: #f85959;
+  border: none;
+  color: #fff;
+  margin-top: 80rpx;
 }

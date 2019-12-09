@@ -123,7 +123,7 @@ Page({
   gotoinfo(e) {
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../infoRelease/index?id=' + id,
+      url: '../infoDetail/index?id=' + id,
     })
   },
   /**

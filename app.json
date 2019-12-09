@@ -1,18 +1,22 @@
 {
   "pages": [
-    "pages/first/index",
-    "pages/buy/index",
+    "pages/self/index",
+    "pages/login/index",
+    "pages/selfDetail/index",
+    "pages/infoDetail/index",
+    "pages/companyinfo/index",
+    "pages/concat/index",
     "pages/renewal/index",
+    "pages/identify/index",
+    "pages/infoRelease/index",
+    "pages/release/index",
+    "pages/buy/index",
+    "pages/first/index",
+    "pages/regist/index",
     "pages/company/index",
     "pages/overtime/index",
-    "pages/companyinfo/index",
-    "pages/self/index",
-    "pages/release/index",
     "pages/history/index",
-    "pages/identify/index",
-    "pages/regist/index",
     "pages/remaining/index",
-    "pages/infoRelease/index",
     "pages/fail/index",
     "pages/success/index",
     "pages/index/index",
@@ -25,10 +29,10 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#222",
-    "selectedColor": "#fff",
-    "borderStyle": "black",
-    "backgroundColor": "#d43d3d",
+    "color": "#535353",
+    "selectedColor": "#D43D3D",
+    "borderStyle": "white",
+    "backgroundColor": "#EEEEEE",
     "list": [
       {
         "pagePath": "pages/company/index",
@@ -43,16 +47,22 @@
         "selectedIconPath": "img/tabar/buyselect.png"
       },
       {
+        "pagePath": "pages/infoRelease/index",
+        "text": "发布",
+        "iconPath": "img/tabar/release.png",
+        "selectedIconPath": "img/tabar/release.png"
+      },
+      {
         "pagePath": "pages/sell/index",
         "text": "出售",
         "iconPath": "img/tabar/sell.png",
-        "selectedIconPath": "img/tabar/sellSelect.png"
+        "selectedIconPath": "img/tabar/sellselect.png"
       },
       {
         "pagePath": "pages/self/index",
         "text": "个人",
         "iconPath": "img/tabar/self.png",
-        "selectedIconPath": "img/tabar/selfSelect.png"
+        "selectedIconPath": "img/tabar/selfselect.png"
       }
     ]
   },

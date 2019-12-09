@@ -15,12 +15,12 @@ Page({
   },
   gotoRegist() {
     wx.navigateTo({
-      url: '../regist/index?type=2',
+      url: '../login/index?type=2',
     })
   },
   gotologin(){
     wx.navigateTo({
-      url: '../regist/index?type=1',
+      url: '../login/index?type=1',
     })
   },
   /**

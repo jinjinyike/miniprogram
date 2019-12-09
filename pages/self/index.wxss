@@ -1,17 +1,89 @@
 /* pages/self/index.wxss */
 .con{
-  padding: 0 25rpx;
+  padding: 0 37rpx;
+}
+.self-headers{
+  display: flex;
+  align-items: center;
+  margin: 51rpx 0 0 30rpx;
+  color: #222;
+  font-size: 40rpx;
+}
+.self-headers image{
+  width: 128rpx;
+  height: 128rpx;
+}
+.self-headers view{
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+}
+.self-headers text:nth-of-type(2){
+  color: #999;
+  font-size: 26rpx;
+}
+.self-auth{
+  width: 688rpx;
+  height: 128rpx;
+  margin: auto;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  margin-bottom: 43rpx;
+}
+.self-auth image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.self-auth view:nth-of-type(1){
+  display: flex;
+  flex-direction: column;
+  padding-left: 37rpx;
+   
+}
+.self-auth view:nth-of-type(1) text:nth-of-type(2){
+  color: #FFC4BC;
+}
+.account{
+  display: inline-block;
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  color: #E25F4C;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-right: 37rpx;
 }
 .list{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 85rpx;
-  line-height: 85rpx;
-  border-bottom: 1px solid #e8e8e8;
-  font-size: 38rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 30rpx;
+  color: #000;
+  /* margin-top: 85rpx; */
 }
 .list image{
   width: 17rpx;
   height: 30rpx;
+}
+.list-label{
+  display: flex;
+  align-items: center;
+}
+.list-label image{
+ width: 33rpx;
+ height: 29rpx;
+ margin-right: 21rpx;
 }

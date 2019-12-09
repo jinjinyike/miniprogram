@@ -1,10 +1,6 @@
 /**app.wxss**/
 page {
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; */
   box-sizing: border-box;
   font-size: 36rpx;
   font-family: SimHei;
@@ -36,27 +32,42 @@ page {
   width: 254rpx;
   height: 252rpx;
 }
+
+.pro .list{
+  background: #fff;
+  padding: 30rpx 28rpx;
+  margin: 17rpx 32rpx 0 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pro .list view:nth-of-type(1){
+  font-size: 34rpx;
+}
+.pro .list view:nth-child(2){
+  margin-top: 10rpx;
+}
+.list-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pro .list text{
+  color: #999;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.pro .list text:nth-last-of-type(1){
+  margin-right: 0;
+}
 .top{
 	background-color: #ff0000;
-  font-size: 22rpx;
+  font-size: 22rpx!important;
   color: #fff;
   text-align: center;
   padding: 5rpx 8rpx;
   display: inline-block;
   border-radius: 5rpx;
-  margin-right: 20rpx;
-}
-.pro .list{
-  padding: 10rpx 0;
-  margin: 0 25rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid #e8e8e8;
-}
-.pro .list text{
-  color: #999;
-  font-size: 24rpx;
   margin-right: 20rpx;
 }
 .picker{
@@ -65,5 +76,5 @@ page {
   /* width: 8.5rpx; */
   /* height: 15rpx; */
   /* display: block; */
-  background-size:20% ;
+  background-size:19rpx ;
 }

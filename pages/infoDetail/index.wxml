@@ -1,0 +1,48 @@
+<!--pages/infoDetail/index.wxml-->
+<view class='con'>
+  <!-- <view class='title'>ceshititle</view> -->
+  <view class='info'>
+    <view class='flex '>
+      <image></image>
+      <view class='flex self'>
+        <view>爱你的小胖</view>
+        <view>
+          <text>xiaoshi</text>
+          <text>anyang</text>
+        </view>
+      </view>
+
+    </view>
+    <view class='care' bindtap='cancel'>{{info.is_top==1?"取消关注":"关注"}}</view>
+  </view>
+  <view class='list'>
+    <view>
+      <text>名称：</text>
+      <text>{{info.name}}</text>
+    </view>
+    <view>
+      <text>标签：</text>
+      <text>{{objectArray1[idx].name}}</text>
+    </view>
+    <view>
+      <text>重量：</text>
+      <text>{{info.weight}}吨</text>
+    </view>
+    <view>
+      <text>化验：</text>
+      <text>{{info.analysis}}</text>
+    </view>
+    <view>
+      <text>地址：</text>
+      <text>{{info.address}}</text>
+    </view>
+    <view>
+      <text>联系人：</text>
+      <text>{{info.link_name}}</text>
+    </view>
+    <view>
+      <text>联系电话：</text>
+      <text>{{info.link_phone}}</text>
+    </view>
+  </view>
+</view>

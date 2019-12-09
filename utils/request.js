@@ -45,12 +45,10 @@ const request = (options) => {
     success: function(res) {
       if (res.data.code === -1) {
         console.log(res)
-        // app.getUserInfo(() => {
-        //   request(options);
-        // });
-        wx.redirectTo({
-          url: '../regist/index?type = 1',
-        })
+        
+        // wx.redirectTo({
+        //   url: '../login/index?type = 1',
+        // })
       } else {
         typeof options.success === 'function' && options.success.call(this, res.data, res);
       }

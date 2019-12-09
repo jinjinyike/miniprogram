@@ -1,12 +1,17 @@
 @import "../../template/search.wxss";
 .list{
   height: 103rpx;
-  padding: 10rpx 0;
-  margin: 0 25rpx;
+  padding: 20rpx 30rpx;
+  margin: 20rpx 25rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  border-radius: 8rpx;
+}
+.list .name{
+  color: #333;
+  font-size: 34rpx;
 }
 .list text{
   color: #999;

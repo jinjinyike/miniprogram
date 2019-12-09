@@ -40,19 +40,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
 					"name": "登录或者注册",
 					"pathName": "pages/regist/index",
-					"query": "type=1",
+					"query": "type=2",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "注册成功",
 					"pathName": "pages/success/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "登录或者注册",
+					"pathName": "pages/login/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "认证",
+					"pathName": "pages/identify/index",
 					"query": "type=1",
 					"scene": null
 				}

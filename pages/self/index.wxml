@@ -1,22 +1,53 @@
 <view class='con'>
+  <view class='self-headers' bindtap='selfDetail'>
+    <image></image>
+    <view>
+      <text>曾总</text>
+      <text>17718222958</text>
+    </view>
+  </view>
+  <view class='self-auth'>
+    <image src='../../img/icons/rest-bg.png' ></image>
+    <view bindtap='gotorest'> 
+      <text>会员权限</text>
+      <text>使用期限剩余{{expire_day}}天，剩余置顶{{top_day}}天</text>
+    </view>
+    <view class='account' bindtap='gotopay'>立即充值</view>
+  </view>
+  <!-- <view class="list" bindtap='gotorest'>
+    <view class='list-label'>
+      <image src='../../img/icons/self-1.png'></image>
+      <text>企业认证</text>
+    </view>
+    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+  </view> -->
   <view class="list" bindtap='gotoidentify' data-type='2'>
-    <text>企业营业执照认证</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
+    <view class='list-label'>
+      <image src='../../img/icons/self-2.png'></image>
+      <text>营业执照认证</text>
+    </view>
+    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
   </view>
   <view class="list" bindtap='gotoidentify' data-type='3'>
-    <text>身份证认证</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
+    <view class='list-label'>
+      <image src='../../img/icons/self-3.png'></image>
+      <text>身份证认证</text>
+    </view>
+    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
   </view>
   <view class="list" bindtap="gotohistory">
-    <text>历史发布</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
+    <view class='list-label'>
+      <image src='../../img/icons/self-4.png'></image>
+      <text>历史发布</text>
+    </view>
+    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
   </view>
-  <view class="list" bindtap='gotorest'>
-    <text>期限剩余</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
-  </view>
-  <view class="list" bindtap='gotopay'>
-    <text>充值</text>
-    <image src='../../img/icons/arrow_right.png' alt='箭头' ></image>
+
+  <view class="list" bindtap='gotoconcat'>
+    <view class='list-label'>
+      <image src='../../img/icons/self-5.png'></image>
+      <text>联系我们</text>
+    </view>
+    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
   </view>
 </view>

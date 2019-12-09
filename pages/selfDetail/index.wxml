@@ -1,0 +1,12 @@
+<!--pages/selfDetail/index.wxml-->
+<view class='con'>
+  <view>
+    <text>头像</text>
+    <image src='' />
+  </view>
+  <view>
+    <text>昵称</text>
+    <text>昵称</text>
+  </view>
+</view>
+<button class='btn'>保存</button>

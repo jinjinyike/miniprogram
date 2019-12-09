@@ -1,20 +1,23 @@
 <!--pages/renewal/index.wxml-->
 <view class="con">
+  <image src='../../img/icons/login-bg.jpg' mode='widthFix' class='bg'></image>
   <view class="item">
     <text class="item-info">浏览付费</text>
     <view class="item-list">
       <view class="{{index==lookId?'card active':'card'}}" wx:for='{{lookArr}}' data-id='{{index}}' data-type='lookId' bindtap="changeId" wx:key='{{item.id}}'>
+        <text class="text-money">
+          <!-- <text class="text-money-flag">¥ </text> --> {{item.amount}}元
+        </text>
         <text class="text-month">{{item.time}}个月</text>
-        <text class="text-money"><text class="text-money-flag">¥ </text>{{item.amount}}</text>
-        <text class="text-info">{{item.desc}}</text>
+        <text class="text-info" wx:if='{{index!=0}}'>{{item.desc}}</text>
       </view>
     </view>
     <text class="item-info">顶置特权</text>
     <view class="item-list">
       <view class="{{index==topId?'card active':'card'}}" wx:for='{{topArr}}' data-id='{{index}}' data-type='topId' bindtap="changeId" wx:key='{{item.id}}'>
-        <text class="text-month">{{item.time}}个月</text>
         <text class="text-money"><text class="text-money-flag">¥ </text>{{item.amount}}</text>
-        <text class="text-info">{{item.desc}}</text>
+        <text class="text-month">{{item.time}}个月</text>
+        <text class="text-info" wx:if='{{index!=0}}'>{{item.desc}}</text>
       </view>
 
     </view>
@@ -23,6 +26,6 @@
       <text class="pay-text">微信支付</text>
       <radio checked></radio>
     </view>
+    <button class="btn btn-pay" bindtap="pay">立即支付</button>
   </view>
-  <button class="btn btn-pay" bindtap="pay">立即支付</button>
 </view>

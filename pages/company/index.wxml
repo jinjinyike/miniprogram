@@ -2,24 +2,25 @@
 
 <view class="con">
   <view class="header">
+    <image class='search-bg' src='../../img/icons/search-bg.png' alt='北京'></image>
     <view class="search">
-      <image src='../../img/icons/search.png' alt='检索'></image>
-      <input placeholder="检索" value="{{search.name}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
+      <input placeholder="输入要检索的内容" value="{{search.name}}" confirm-type='检索' bindconfirm='handleKeyInput'></input>
+      <image src='../../img/icons/search.png' alt='检索' bindtap='handleKeyInput'></image>
     </view>
-    <image src='../../img/icons/plus1.png' class="plus" alt='发布' bindtap="gotorelease"></image>
   </view>
+  <!-- <image src='../../img/icons/plus1.png' class="plus" alt='发布' bindtap="gotorelease"></image> -->
   <view class="scroll-con">
     <scroll-view scroll-x class="scroll" style="width: 670rpx">
       <text wx:for='{{moldArr}}' data-id='{{item.id}}' data-kw='{{item.name}}' bindtap="changekey" class="{{item.id==search.mold?'active':''}}" wx:key='{{item.id}}'>{{item.name}}</text>
     </scroll-view>
     <view class='more'>
-      <image src='../../img/icons/more.png' alt='更多' />
+      <image src='../../img/icons/arrow_right.png' alt='更多' />
     </view>
   </view>
-  <view class=' border '> </view>
+  <!-- <view class=' border '> </view> -->
   <view wx:if='{{list.length>0}}'>
     <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
-      <view>{{item.name}}</view>
+      <view class='name'>{{item.name}}</view>
       <view>
         <template is='top' wx:if='{{item.is_top}}' />
         <text>{{item.type==1?'生产厂家':'销售公司'}}</text>
@@ -28,5 +29,6 @@
   </view>
   <view wx:else class="no-more">
     <image alt='无数据' src='../../img/icons/no.png'></image>
+    <view>暂无数据</view>
   </view>
 </view>

@@ -1,13 +1,24 @@
 <!--pages/remaining/index.wxml-->
 <view class="con">
-  <view class="con-text">
-    <view class="smart-text">
-      使用期限剩余
-      <text class="num-text">{{expire_day||0}}</text>天
-    </view>
-    <view class="smart-text">
-      消息置顶剩余
-      <text class="num-text">{{top_day||0}}</text>天
+  <!-- <image class='rest-bg' src='../../img/icons/rest-bg.png'></image> -->
+  <view class='rest-bg'></view>
+  <view class='con-body'>
+    <view class='self-title'>会员中心</view>
+    <view class="con-text">
+      <view class="smart-text">
+        <view>
+          <text class="num-text"><text class='special-num'>{{top_day||0}}</text>天</text>
+          <text>消息置顶剩余</text>
+        </view>
+        <image src='../../img/icons/rest-2.png'></image>
+      </view>
+      <view class="smart-text">
+        <view>
+          <text class="num-text"><text class='special-num'>{{expire_day||0}}</text>天</text>
+          <text>使用期限剩余</text>
+        </view>
+        <image src='../../img/icons/rest-1.png'></image>
+      </view>
     </view>
   </view>
   <button class="btn btn-pay" bindtap='gotopay'>立即充值</button>

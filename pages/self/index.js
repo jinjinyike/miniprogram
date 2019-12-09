@@ -1,4 +1,7 @@
 const request = require('../../utils/request');
+const moment = require('../../utils/moment.min.js')
+const app = getApp();
+
 import {
   API,
   HOST
@@ -9,7 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    show_expire_time: 0,
+    top_expire_time: 0
   },
 
   /**
@@ -41,6 +45,16 @@ Page({
       url: '../history/index',
     })
   },
+  gotoconcat(){
+    wx.navigateTo({
+      url: '../concat/index',
+    })
+  },
+  selfDetail(){
+    wx.navigateTo({
+      url: '../selfDetail/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -52,7 +66,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    request({
+      url: API.expire,
+      data: {
+        id: app.globalData.userInfo.id
+      },
+      method: 'POST',
+      success: res => {
+        if (res.data) {
+          this.setData({
+            ...res.data,
+            expire_day: moment(res.data.show_expire_time).diff(moment(), 'days'),
+            top_day: moment(res.data.top_expire_time).diff(moment(), 'days')
+          })
+        }
+      },
+    })
   },
 
   /**

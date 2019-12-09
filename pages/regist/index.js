@@ -23,7 +23,7 @@ Page({
   onLoad: function(options) {
     console.log(options)
     wx.setNavigationBarTitle({
-      title: options.type == 1 ? '手机登录' : '手机注册测试',
+      title: options.type == 1 ? '手机登录' : '手机注册',
     })
     this.setData({
       type: options.type
@@ -46,11 +46,7 @@ Page({
         icon: 'none'
       })
     }
-    wx.showToast({
-      title: '点击了1',
-      icon: 'none'
-    })
-    console.warn('请求前')
+    
     request({
       url: API.getCode,
       data: {

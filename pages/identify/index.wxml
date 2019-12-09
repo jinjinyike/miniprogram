@@ -3,13 +3,19 @@
   <view class='con-body'>
     <view class='row'>
       <text>{{type==2?'企业名称':'姓名'}}：</text>
-      <input type="text"  placeholder='请输入' bindinput='bindinput' value='{{name}}'/>
+      <input type="text" placeholder='请输入' bindinput='bindinput' value='{{name}}' />
     </view>
     <view class='rowtext'>{{type==2?'营业执照照片':'身份证照片'}}</view>
     <view class='upload' bindtap='upload'>
       <image wx:if='{{img}}' src='{{img}}' bindtap='largeImg'></image>
-      <text wx:else>+</text>
+      <view wx:else class='add-bg'>
+        <image wx:if='{{type==2}}' src='../../img/icons/card-add1.jpg' class="large-img"></image>
+        <image wx:else src='../../img/icons/card-add.png' class="small-img"></image>
+        <text>+</text>
+        <text>点击上传</text>
+      </view>
+      <!--  -->
     </view>
-    <button wx:if='{{!show}}' class='btn' bindtap='submit'>提交信息</button>
+    <button wx:if='{{!show}}' class='btn' bindtap='submit'>上传</button>
   </view>
 </view>
