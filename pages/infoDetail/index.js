@@ -11,6 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    HOST,
     info: {
       name: ''
     },
@@ -53,11 +54,14 @@ Page({
     request({
       url: value != 1 ? API.concernNews : API.delConcernNews,
       data: {
-        id
+        id:this.data.info.id
       },
       method: 'POST',
       success: res => {
         if (res.code == 0) {
+          let info=this.data.info;
+          info.is_top==1?0:1;
+          this.setData({info})
           wx.showToast({
             title: value ? '关注成功' : '取消关注成功',
           })

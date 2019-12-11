@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/self/index",
     "pages/login/index",
+    "pages/infoRelease/index",
+    "pages/release/index",
+    "pages/self/index",
     "pages/selfDetail/index",
     "pages/infoDetail/index",
     "pages/companyinfo/index",
     "pages/concat/index",
     "pages/renewal/index",
     "pages/identify/index",
-    "pages/infoRelease/index",
-    "pages/release/index",
     "pages/buy/index",
     "pages/first/index",
     "pages/regist/index",

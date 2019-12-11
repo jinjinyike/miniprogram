@@ -5,13 +5,15 @@
 .self-headers{
   display: flex;
   align-items: center;
-  margin: 51rpx 0 0 30rpx;
+  margin: 51rpx 0 20rpx 30rpx;
   color: #222;
   font-size: 40rpx;
 }
 .self-headers image{
   width: 128rpx;
   height: 128rpx;
+  border-radius: 128rpx;
+  margin-right: 10rpx;
 }
 .self-headers view{
   display: flex;
@@ -86,4 +88,17 @@
  width: 33rpx;
  height: 29rpx;
  margin-right: 21rpx;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.list .already{
+  color: #999;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+  margin-bottom: -3rpx;
+}
+.list .red{
+  color: #D74540;
 }

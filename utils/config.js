@@ -31,5 +31,10 @@ module.exports = {
     applyWxpay: `${HOST}/api/pay/applyWxpay`, //支付
     payOrder: `${HOST}/api/pay/order`, //下单
     checkwxPay: `${HOST}/api/Pay/checkwx_pay/out_trade_no/`, //下单回调
+    selfInfo: `${HOST}/api/company/index`, //个人中心
+    headImg: `${HOST}/api/company/upd_head_img`, //个人中心头像
+    updIndex: `${HOST}/api/company/upd_index`, //更改个人中心信息
+    getInfo: `${HOST}/api/News/getInfo`, //更改个人中心信息
+    
   }
 }

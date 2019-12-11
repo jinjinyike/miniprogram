@@ -50,6 +50,27 @@ page{
   margin-top: 30rpx;
   border: none;
 }
+.flex-type{
+  display: flex;
+  align-items: center;
+}
+.flex-type view{
+  display: inline-block;
+  width: 138rpx;
+  height: 45rpx;
+  border: 1px solid #737373;
+  color: #737373;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 45rpx;
+}
+.flex-type .active{
+  border: 1px solid #FF0000;
+  background:rgba(255,0,0,0.1);
+  color: #FF0000;
+}
 /* .send {
   color: #f85959;
   background: transparent;

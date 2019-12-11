@@ -1,39 +1,48 @@
 <view class='con'>
   <view class='self-headers' bindtap='selfDetail'>
-    <image></image>
+    <image src='{{HOST+avatar}}'></image>
     <view>
-      <text>曾总</text>
-      <text>17718222958</text>
+      <text>{{name}}</text>
+      <text>{{phone}}</text>
     </view>
   </view>
   <view class='self-auth'>
-    <image src='../../img/icons/rest-bg.png' ></image>
-    <view bindtap='gotorest'> 
+    <image src='../../img/icons/rest-bg.png'></image>
+    <view bindtap='gotorest'>
       <text>会员权限</text>
       <text>使用期限剩余{{expire_day}}天，剩余置顶{{top_day}}天</text>
     </view>
     <view class='account' bindtap='gotopay'>立即充值</view>
   </view>
-  <!-- <view class="list" bindtap='gotorest'>
+  <view class="list" bindtap='gotorelease'>
     <view class='list-label'>
       <image src='../../img/icons/self-1.png'></image>
       <text>企业认证</text>
     </view>
-    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
-  </view> -->
+    <view class='flex'>
+      <text class='already {{company_id==0?"red":""}}' >{{company_id==1?"已认证":'未认证'}}</text>
+      <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    </view>
+  </view>
   <view class="list" bindtap='gotoidentify' data-type='2'>
     <view class='list-label'>
       <image src='../../img/icons/self-2.png'></image>
       <text>营业执照认证</text>
     </view>
-    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    <view class='flex'>
+      <text class='already'>{{is_business_license==1?"已认证":'未认证'}}</text>
+      <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    </view>
   </view>
   <view class="list" bindtap='gotoidentify' data-type='3'>
     <view class='list-label'>
       <image src='../../img/icons/self-3.png'></image>
       <text>身份证认证</text>
     </view>
-    <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    <view class='flex'>
+      <text class='already'>已认证</text>
+      <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
+    </view>
   </view>
   <view class="list" bindtap="gotohistory">
     <view class='list-label'>

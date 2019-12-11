@@ -12,6 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    HOST,
     show_expire_time: 0,
     top_expire_time: 0
   },
@@ -55,6 +56,11 @@ Page({
       url: '../selfDetail/index',
     })
   },
+  gotorelease(){
+    wx.navigateTo({
+      url: '../release/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -67,7 +73,7 @@ Page({
    */
   onShow: function() {
     request({
-      url: API.expire,
+      url: API.selfInfo,
       data: {
         id: app.globalData.userInfo.id
       },

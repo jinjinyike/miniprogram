@@ -4,13 +4,17 @@
   <form bindsubmit="formSubmit" >
     <view class='item'>
       <text>类型：</text>
-      <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name' data-key='index'>
+      <view class='flex-type'>
+        <view class='{{type==1?"active":""}}' bindtap='changeType' data-type='1'>出售</view>
+        <view class='{{type==2?"active":""}}' data-type='2' bindtap='changeType'>收购</view>
+      </view>
+      <!-- <picker name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name' data-key='index'>
         <view class="picker" wx:if='{{!id}}'>
           {{objectArray[index].name}}
         </view>
         <text wx:else>{{info.type==2?'收购':'出售'}}</text>
 
-      </picker>
+      </picker> -->
     </view>
     <view class='item'>
       <text>名称：</text>
@@ -48,7 +52,7 @@
     </view>
     <view class='item'>
       <text>联系电话：</text>
-      <input name='link_phone' wx:if='{{!id}}' placeholder='请填写'></input>
+      <input name='link_phone' wx:if='{{!id}}' value='{{info.link_phone}}' placeholder='请填写'></input>
       <text wx:else>{{info.link_phone}}</text>
     </view>
     <view class='item'>

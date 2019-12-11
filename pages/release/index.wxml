@@ -9,19 +9,23 @@
     </view> -->
     <view class='item'>
       <text>公司名称：</text>
-      <input name='name'></input>
+      <input name='name' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>公司类型：</text>
-      <picker  name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
+      <view class='flex-type'>
+        <view class='{{type==1?"active":""}}' bindtap='changeType' data-type='1'>生产厂家</view>
+        <view class='{{type==2?"active":""}}' data-type='2' bindtap='changeType'>销售公司</view>
+      </view>
+      <!-- <picker  name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
         <view class="picker">
           {{objectArray[index].name}}
         </view>
-      </picker>
+      </picker> -->
     </view>
     <view class='item'>
       <text>公司地址：</text>
-      <input name='address'></input>
+      <input name='address' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>公司主营：</text>
@@ -33,28 +37,28 @@
     </view>
     <view class='item'>
       <text>公司主页：</text>
-      <input name='url'></input>
+      <input name='url' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>公司简介：</text>
-      <input name='desc'></input>
+      <input name='desc' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>联系人：</text>
-      <input name='link_name'></input>
+      <input name='link_name' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>联系电话：</text>
-      <input name='link_phone'></input>
+      <input name='link_phone' placeholder='请输入'></input>
     </view>
     <view class='item'>
       <text>联系邮箱：</text>
-      <input name='link_email'></input>
+      <input name='link_email' placeholder='请输入'></input>
     </view>
     <view class='item'>
-      <text>消息置顶：</text>
-      <switch checked bindchange="switch1Change" name='is_top'/>
+      <text>企业置顶：</text>
+      <switch checked bindchange="switch1Change" name='is_top' />
     </view>
-    <button  class="send" form-type="submit">发布</button>
+    <button class="send" form-type="submit">立即认证</button>
   </form>
 </view>

@@ -22,6 +22,7 @@ Page({
     ],
     index: 0,
     idx: 0,
+    type:1,
     objectArray1: [{
         id: 1,
         name: '金属'
@@ -41,6 +42,11 @@ Page({
    */
   onLoad: function(options) {
     this.getkeys()
+    // this.getInfo()
+  },
+  changeType(e){
+    let type = e.currentTarget.dataset.type;
+    this.setData({type})
   },
   getkeys() {
     request({
@@ -55,9 +61,10 @@ Page({
   },
   formSubmit(e) {
     console.log(e)
+    let type=this.data.type
     let obj = e.detail.value;
     obj.is_top = obj.is_top ? 1 : 0; //是否置顶0-非，1-是
-    obj.type = Number(obj.type) + 1; //公司类型1-生产厂家，2-销售公司
+    obj.type = Number(type); //公司类型1-生产厂家，2-销售公司
     obj.major = this.data.objectArray1[this.data.idx].name; //先用label的name吧
     //major字段待定
     for (let key in obj) {

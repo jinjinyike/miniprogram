@@ -2,11 +2,15 @@
 <view class='con'>
   <view>
     <text>头像</text>
-    <image src='' />
+    <image src='{{HOST+avatar}}' bindtap='upload'/>
   </view>
   <view>
     <text>昵称</text>
-    <text>昵称</text>
+    <input bindinput='bindinput' data-type='name' value='{{name}}' placeholder='请输入'></input>
+  </view>
+  <view>
+    <text>地址</text>
+    <input bindinput='bindinput' data-type='address' value='{{address}}' placeholder='请输入'></input>
   </view>
 </view>
-<button class='btn'>保存</button>
+<button class='btn' bindtap='save'>保存</button>

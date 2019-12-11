@@ -11,6 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    self:{},
     objectArray: [{
         id: 1,
         name: '出售'
@@ -24,6 +25,7 @@ Page({
     idx: 0,
     objectArray1: [],
     id: '',
+    type:1,
     info: {
       name: ''
     }
@@ -51,6 +53,22 @@ Page({
       // this.getkeys()
     // }
   },
+  getInfo() {
+    request({
+      url: API.getInfo,
+      method: 'POST',
+      success: res => {
+        let info = { link_phone: res.data.phone,name:res.data.name}
+        this.setData({
+          info
+        })
+      },
+    })
+  },
+  changeType(e) {
+    let type = e.currentTarget.dataset.type;
+    this.setData({ type })
+  },
   getkeys() {
     request({
       url: API.labelList,
@@ -71,9 +89,10 @@ Page({
   },
   formSubmit(e) {
     console.log(e)
+    let {type}=this.data
     let obj = e.detail.value;
     obj.is_top = obj.is_top ? 1 : 0; //是否置顶0-非，1-是
-    obj.type = this.data.objectArray[this.data.index].id; //类型1-出售-2收购
+    obj.type = type; //类型1-出售-2收购
     obj.label = this.data.objectArray1[this.data.idx].name; //类型1-出售-2收购
     for (let key in obj) {
       if (!obj[key] && obj[key] !== 0) {
@@ -153,6 +172,7 @@ Page({
    */
   onShow: function() {
     this.getkeys()
+    this.getInfo()
   },
 
   /**

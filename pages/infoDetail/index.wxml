@@ -3,12 +3,12 @@
   <!-- <view class='title'>ceshititle</view> -->
   <view class='info'>
     <view class='flex '>
-      <image></image>
+      <image src='{{HOST+info.user.avatar}}' ></image>
       <view class='flex self'>
-        <view>爱你的小胖</view>
+        <view>{{info.user.name}}</view>
         <view>
-          <text>xiaoshi</text>
-          <text>anyang</text>
+          <text>{{info.updated}}</text>
+          <text>{{info.user.address}}</text>
         </view>
       </view>
 
