@@ -24,6 +24,7 @@ page {
 .info image {
   width: 64rpx;
   height: 64rpx;
+  border-radius: 64rpx;
   margin-right: 15rpx;
 }
 

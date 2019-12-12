@@ -1,5 +1,6 @@
+<image src='../../img/icons/login-bg.jpg' mode='widthFix' class='bg'></image>
 <view class='con'>
-  <image src='../../img/icons/login-bg.jpg' mode='widthFix' class='bg'></image>
+  
   <image src='../../img/icons/logo-text.png' class='logo'></image>
   <view class='con-body'>
     <view class='text-center'>

@@ -1,6 +1,7 @@
 <!--pages/companyinfo/index.wxml-->
+<image src='../../img/icons/company-bg.jpg' mode='widthFix' class='bg'></image>
 <view class="con">
-  <image src='../../img/icons/company-bg.jpg' mode='widthFix' class='bg'></image>
+  
   <view class="card">
     <!-- <image class="img" src='../../img/icons/card.jpg'></image> -->
     <view class="info-card">

@@ -58,7 +58,7 @@ Page({
       url: API.getInfo,
       method: 'POST',
       success: res => {
-        let info = { link_phone: res.data.phone,name:res.data.name}
+        let info = { link_phone: res.data.phone, link_name: res.data.name, address: res.data.address}
         this.setData({
           info
         })

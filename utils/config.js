@@ -35,6 +35,7 @@ module.exports = {
     headImg: `${HOST}/api/company/upd_head_img`, //个人中心头像
     updIndex: `${HOST}/api/company/upd_index`, //更改个人中心信息
     getInfo: `${HOST}/api/News/getInfo`, //更改个人中心信息
+    indexInfo: `${HOST}/api/company/indexInfo`, //回显认证信息
     
   }
 }

@@ -23,18 +23,16 @@ Page({
     index: 0,
     idx: 0,
     type:1,
-    objectArray1: [{
-        id: 1,
-        name: '金属'
-      },
-      {
-        id: 2,
-        name: '锰铁'
-      }, {
-        id: 3,
-        name: '硅'
-      }
+    objectArray1: [
+      // {
+      //   id: 1,
+      //   name: '金属'
+      // }
     ],
+    info:{
+      is_top:1
+    },
+    id:''
   },
 
   /**
@@ -42,6 +40,16 @@ Page({
    */
   onLoad: function(options) {
     this.getkeys()
+    if(options.id){
+      request({
+        url: API.indexInfo,
+        data: { id: options.id},
+        method: 'POST',
+        success: res => {
+          this.setData({info:res.data,id:options.id})
+        }
+      })
+    }
     // this.getInfo()
   },
   changeType(e){
@@ -59,8 +67,17 @@ Page({
       },
     })
   },
+  switchChange(e) {
+    console.log(e)
+    let {
+      id
+    } = this.data;
+    if (!id) return
+    let value = e.detail.value;
+  },
   formSubmit(e) {
     console.log(e)
+    if(this.data.id) return
     let type=this.data.type
     let obj = e.detail.value;
     obj.is_top = obj.is_top ? 1 : 0; //是否置顶0-非，1-是

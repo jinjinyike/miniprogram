@@ -46,9 +46,9 @@ const request = (options) => {
       if (res.data.code === -1) {
         console.log(res)
         
-        // wx.redirectTo({
-        //   url: '../login/index?type = 1',
-        // })
+        wx.redirectTo({
+          url: '../login/index?type = 1',
+        })
       } else {
         typeof options.success === 'function' && options.success.call(this, res.data, res);
       }

@@ -24,6 +24,12 @@ Page({
   onLoad: function(options) {
     this.getList()
   },
+  gotoinfo(e){
+    let id=e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../infoDetail/index?id='+id,
+    })
+  },
   getList() {
     request({
       url: API.history,

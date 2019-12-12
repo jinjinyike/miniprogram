@@ -1,19 +1,19 @@
 <!--pages/infoDetail/index.wxml-->
 <view class='con'>
-  <!-- <view class='title'>ceshititle</view> -->
+  <view class='title'>{{info.title}}</view>
   <view class='info'>
     <view class='flex '>
       <image src='{{HOST+info.user.avatar}}' ></image>
       <view class='flex self'>
         <view>{{info.user.name}}</view>
         <view>
-          <text>{{info.updated}}</text>
+          <text>{{diffTime}}</text>
           <text>{{info.user.address}}</text>
         </view>
       </view>
 
     </view>
-    <view class='care' bindtap='cancel'>{{info.is_top==1?"取消关注":"关注"}}</view>
+    <view class='care' bindtap='cancel'>{{info.is_concern==1?"取消关注":"关注"}}</view>
   </view>
   <view class='list'>
     <view>

@@ -57,8 +57,13 @@ Page({
     })
   },
   gotorelease(){
+    let url = '../release/index'
+    if (this.data.company_id!=0){
+      let id = this.data.company_id
+      url = '../release/index?id='+id
+    }
     wx.navigateTo({
-      url: '../release/index',
+      url,
     })
   },
   /**

@@ -20,7 +20,7 @@
       <text>企业认证</text>
     </view>
     <view class='flex'>
-      <text class='already {{company_id==0?"red":""}}' >{{company_id==1?"已认证":'未认证'}}</text>
+      <text class='already {{company_id==0?"red":""}}' >{{company_id!=0?"已认证":'未认证'}}</text>
       <image src='../../img/icons/arrow_right.png' alt='箭头'></image>
     </view>
   </view>

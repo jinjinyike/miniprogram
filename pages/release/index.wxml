@@ -9,14 +9,16 @@
     </view> -->
     <view class='item'>
       <text>公司名称：</text>
-      <input name='name' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='name' value='info.name' placeholder='请输入'></input>
+      <text wx:else>{{info.name}}</text>
     </view>
     <view class='item'>
       <text>公司类型：</text>
-      <view class='flex-type'>
+      <view class='flex-type' wx:if='{{!id}}'>
         <view class='{{type==1?"active":""}}' bindtap='changeType' data-type='1'>生产厂家</view>
         <view class='{{type==2?"active":""}}' data-type='2' bindtap='changeType'>销售公司</view>
       </view>
+      <text wx:else>{{info.type==1?"生产厂家":"销售公司"}}</text>
       <!-- <picker  name='type' bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key='name'>
         <view class="picker">
           {{objectArray[index].name}}
@@ -25,40 +27,54 @@
     </view>
     <view class='item'>
       <text>公司地址：</text>
-      <input name='address' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='address' placeholder='请输入'></input>
+      <text wx:else>{{info.address}}</text>
+
     </view>
     <view class='item'>
       <text>公司主营：</text>
-      <picker name='major' bindchange="bindPickerChange1" value="{{idx}}" range="{{objectArray1}}" range-key='name'>
+      <picker wx:if='{{!id}}' name='major' bindchange="bindPickerChange1" value="{{idx}}" range="{{objectArray1}}" range-key='name'>
         <view class="picker">
           {{objectArray1[index].name}}
         </view>
       </picker>
+      <text wx:else>{{info.major}}</text>
+
     </view>
     <view class='item'>
       <text>公司主页：</text>
-      <input name='url' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='url' placeholder='请输入'></input>
+      <text wx:else>{{info.url}}</text>
+
     </view>
     <view class='item'>
       <text>公司简介：</text>
-      <input name='desc' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='desc' placeholder='请输入'></input>
+      <text wx:else>{{info.desc}}</text>
+
     </view>
     <view class='item'>
       <text>联系人：</text>
-      <input name='link_name' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='link_name' placeholder='请输入'></input>
+      <text wx:else>{{info.link_name}}</text>
+
     </view>
     <view class='item'>
       <text>联系电话：</text>
-      <input name='link_phone' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='link_phone' placeholder='请输入'></input>
+      <text wx:else>{{info.link_phone}}</text>
+
     </view>
     <view class='item'>
       <text>联系邮箱：</text>
-      <input name='link_email' placeholder='请输入'></input>
+      <input wx:if='{{!id}}' name='link_email' placeholder='请输入'></input>
+      <text wx:else>{{info.link_email}}</text>
+
     </view>
     <view class='item'>
       <text>企业置顶：</text>
-      <switch checked bindchange="switch1Change" name='is_top' />
+      <switch  bindchange="switchChange" name='is_top' checked="{{info.is_top==1?true: false}}" disabled="{{info.is_top==1?true: false}}" />
     </view>
-    <button class="send" form-type="submit">立即认证</button>
+    <button class="send" form-type="submit">{{id?"已认证":"立即认证"}}</button>
   </form>
 </view>
