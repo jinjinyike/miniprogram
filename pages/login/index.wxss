@@ -85,8 +85,12 @@
   margin-top: 40rpx;
   text-align: center;
   color: #F34F4F;
-  font-size: 36rpx;
+  font-size: 30rpx;
   font-weight:400;
+}
+.no-login{
+  margin-left: 20rpx;
+  font-size: 30rpx;
 }
 .fixed-view{
   width: 100%;

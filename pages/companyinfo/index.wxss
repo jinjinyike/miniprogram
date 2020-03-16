@@ -1,7 +1,9 @@
 /* pages/companyinfo/index.wxss */
-page{
+
+page {
   position: relative;
 }
+
 .con {
   position: relative;
 }
@@ -11,7 +13,7 @@ page{
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh!important;
+  height: 100vh !important;
   z-index: -1;
 }
 
@@ -41,6 +43,12 @@ page{
   color: #fff;
 }
 
+.card-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+}
+
 .company-name {
   font-size: 42rpx;
   font-weight: bold;
@@ -49,16 +57,19 @@ page{
 
 .address {
   font-size: 24rpx;
-  margin-top: 26rpx;
+  /* margin-top: 26rpx; */
 }
-.address image{
+
+.address image {
   width: 20rpx;
   height: 27rpx;
   margin-right: 10rpx;
 }
-.info-list{
-  margin:58rpx 0 71rpx 0;
+
+.info-list {
+  margin: 58rpx 0 71rpx 0;
 }
+
 .item {
   height: 57rpx;
   display: flex;
@@ -99,4 +110,16 @@ page{
 
 .user-phone image {
   height: 32rpx;
+}
+
+.care {
+  width: 112rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #fff;
+  background: #f34f4f;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+  margin-left: 20rpx;
 }

@@ -66,11 +66,13 @@ page {
 .list view {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 34rpx;
   color: #666;
-  height: 60rpx;
+  padding: 8px 0;
+  /* height: 60rpx; */
 }
 .list view text:nth-of-type(2){
   color: #222;
+  flex: 1;
 }

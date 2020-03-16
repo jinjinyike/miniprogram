@@ -1,12 +1,17 @@
 <!--pages/companyinfo/index.wxml-->
 <image src='../../img/icons/company-bg.jpg' mode='widthFix' class='bg'></image>
 <view class="con">
-  
+
   <view class="card">
     <!-- <image class="img" src='../../img/icons/card.jpg'></image> -->
     <view class="info-card">
       <view class="company-name">{{info.name}}</view>
-      <view class="address"><image src='../../img/icons/address.png' />{{info.address}}</view>
+      <view class='card-flex'>
+        <view class="address">
+          <image src='../../img/icons/address.png' />{{info.address}}</view>
+        <view class='care' bindtap='cancel'>{{info.is_concern==1?"取消关注":"关注"}}</view>
+      </view>
+
     </view>
     <view class="info-list">
       <view class='item'>

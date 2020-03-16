@@ -131,21 +131,21 @@ Page({
             key: 'userInfo',
             data: JSON.stringify(res.data),
           })
-          wx.switchTab({
-            url: '../self/index',
-          })
-          // if (moment().isBefore(res.data.show_expire_time)) {
-          //   //正常登录
-          //   wx.switchTab({
-          //     url: '../self/index',
-          //   })
+          // wx.switchTab({
+          //   url: '../self/index',
+          // })
+          if (moment().isBefore(res.data.show_expire_time)) {
+            //正常登录
+            wx.switchTab({
+              url: '../self/index',
+            })
 
-          // } else {
-          //   //使用期限已到
-          //   wx.navigateTo({
-          //     url: '../fail/index?type=1',
-          //   })
-          // }
+          } else {
+            //使用期限已到
+            wx.navigateTo({
+              url: '../fail/index?type=1',
+            })
+          }
 
         }
         if (type == 2) {
@@ -160,6 +160,24 @@ Page({
             url: '../identify/index?type=1',
           })
         }
+      }
+    })
+  },
+  noLogin(){
+    request({
+      url: API.login,
+      data: { phone:'18623728375'},
+      method: 'POST',
+      success: res => {
+        if (res.code !== 0) {
+          return wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
+        wx.switchTab({
+            url: '../self/index',
+          })
       }
     })
   },

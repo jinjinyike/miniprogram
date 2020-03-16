@@ -4,7 +4,7 @@
 <view class="pro">
     <view wx:if='{{list.length>0}}'>
       <view wx:for='{{list}}' wx:key='' class='list' data-id='{{item.id}}' bindtap="gotoinfo">
-        <view>{{item.name}}</view>
+        <view class='del-con'><text>{{item.title}}</text><text data-id='{{item.id}}' catchtap='del'>删除</text></view>
         <view>
           <template is='top' wx:if='{{item.is_top}}' />
           <text>{{item.link_name}}</text>

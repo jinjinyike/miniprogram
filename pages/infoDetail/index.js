@@ -43,7 +43,7 @@ Page({
           diffTime = day + '天前'
         }else{
           let hour = pickDate.diff(moment(), 'hours')
-          diffTime = hour < 1 ? pickDate.diff(moment(), 'minutes') + '分钟前' : hour + '小时前'
+          diffTime = hour < 1 ? -pickDate.diff(moment(), 'minutes') + '分钟前' : hour + '小时前'
         }
         console.log(diffTime)
         this.setData({

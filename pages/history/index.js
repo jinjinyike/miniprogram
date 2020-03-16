@@ -24,10 +24,36 @@ Page({
   onLoad: function(options) {
     this.getList()
   },
-  gotoinfo(e){
-    let id=e.currentTarget.dataset.id
+  gotoinfo(e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../infoDetail/index?id='+id,
+      url: '../infoDetail/index?id=' + id,
+    })
+  },
+  del(e) {
+    let id = e.currentTarget.dataset.id
+    request({
+      url: API.delHis,
+      data: {
+        id
+      },
+      method: 'POST',
+      success: res => {
+        let list = this.data.list
+        for (let i = 0; i < list.length; i++) {
+          if (list[i].id == id) {
+            list.splice(i, 1)
+            this.setData({
+              list
+            })
+            wx.showToast({
+              title: '删除成功',
+            })
+            return
+          }
+        }
+
+      }
     })
   },
   getList() {
@@ -39,8 +65,9 @@ Page({
         let search = this.data.search;
         search.pagenum += 1;
         if (res.data.list.length) {
+          let list = this.data.list
           this.setData({
-            list: res.data.list,
+            list: list.concat(res.data.list),
             search
           })
         }

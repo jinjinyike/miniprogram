@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/self/index",
     "pages/login/index",
+    "pages/self/index",
     "pages/infoRelease/index",
     "pages/release/index",
     "pages/selfDetail/index",

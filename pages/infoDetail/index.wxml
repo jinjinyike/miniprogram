@@ -3,7 +3,7 @@
   <view class='title'>{{info.title}}</view>
   <view class='info'>
     <view class='flex '>
-      <image src='{{HOST+info.user.avatar}}' ></image>
+      <image src='{{HOST+info.user.avatar}}'></image>
       <view class='flex self'>
         <view>{{info.user.name}}</view>
         <view>
@@ -18,11 +18,11 @@
   <view class='list'>
     <view>
       <text>名称：</text>
-      <text>{{info.name}}</text>
+      <text>{{info.label}}</text>
     </view>
     <view>
       <text>标签：</text>
-      <text>{{objectArray1[idx].name}}</text>
+      <text>{{info.name}}</text>
     </view>
     <view>
       <text>重量：</text>

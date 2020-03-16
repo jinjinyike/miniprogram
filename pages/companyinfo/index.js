@@ -74,6 +74,33 @@ Page({
       },
     })
   },
+  cancel() {
+    let value = this.data.info.is_concern
+    request({
+      url: value != 1 ? API.concernCompany : API.delConcernCompany,
+      data: {
+        id: this.data.info.id
+      },
+      method: 'POST',
+      success: res => {
+        if (res.code == 0) {
+          let info = this.data.info;
+          info.is_concern = info.is_concern == 1 ? 0 : 1;
+          this.setData({
+            info
+          })
+          wx.showToast({
+            title: value ? '取消关注成功' : '关注成功',
+          })
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none'
+          })
+        }
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -43,7 +43,7 @@ Page({
     let _id;
     _id = this.data[type] == id ? null : id
     this.setData({
-      [type]: _id
+      [type]: String(_id)
     })
   },
   pay() {
@@ -53,31 +53,32 @@ Page({
         icon: 'none'
       })
     }
-    if (this.data.lookId != null && this.data.topId != null) {
-      return wx.showToast({
-        title: '只能选择一项充值项',
-        icon: 'none'
-      })
-    }
+    // if (this.data.lookId != null && this.data.topId != null) {
+    //   return wx.showToast({
+    //     title: '只能选择一项充值项',
+    //     icon: 'none'
+    //   })
+    // }
     let {
       lookId,
       topId
     } = this.data;
     let obj = {}
-    if (lookId != null) {
-      obj = {
-        id: this.data.lookArr[lookId].id,
-        time: this.data.lookArr[lookId].time,
-        amount: this.data.lookArr[lookId].amount
-      }
-    } else {
-      obj = {
-        id: this.data.topArr[topId].id,
-        time: this.data.topArr[topId].time,
-        amount: this.data.topArr[topId].amount
-      }
+    let amount = 0
+    console.log(121)
+    if (lookId!=null) {
+      amount += this.data.lookArr[lookId].amount
     }
-    obj.amount = 0.01; //ceshi
+    if (topId) {
+      amount += this.data.topArr[topId].amount
+    }
+    obj = {
+      show_id: lookId ? this.data.lookArr[lookId].id : 0,
+      top_id: topId ? this.data.topArr[topId].id : 0,
+      // time: this.data.lookArr[lookId].time,
+      amount: amount
+    }
+    // obj.amount = 0.01; //ceshi
     wx.login({
       success: res => {
         request({
@@ -89,7 +90,7 @@ Page({
           method: 'POST',
           success: (res) => {
             let data = res.data
-            let _msg=JSON.parse(data.msg)
+            let _msg = JSON.parse(data.msg)
             console.log(data)
             wx.requestPayment({
               timeStamp: _msg.timeStamp,

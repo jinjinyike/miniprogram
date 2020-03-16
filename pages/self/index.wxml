@@ -6,7 +6,7 @@
       <text>{{phone}}</text>
     </view>
   </view>
-  <view class='self-auth'>
+  <view class='self-auth' wx:if='{{test}}'>
     <image src='../../img/icons/rest-bg.png'></image>
     <view bindtap='gotorest'>
       <text>会员权限</text>

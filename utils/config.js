@@ -1,5 +1,5 @@
 const HOST = 'https://zshj.haixm.cn';
-
+// 18623728375
 module.exports = {
   HOST,
   STORAGE: {
@@ -16,6 +16,7 @@ module.exports = {
     business: `${HOST}/api/about/business`, //营业查询
     expire: `${HOST}/api/about/expire`, //期限剩余
     history: `${HOST}/api/about/news`, //历史发布
+    delHis: `${HOST}/api/News/del`, //历史发布
     releaseCompany: `${HOST}/api/company/create`, //发布企业
     companyList: `${HOST}/api/company/showList`, //企业列表
     companyInfo: `${HOST}/api/company/info`, //企业详情

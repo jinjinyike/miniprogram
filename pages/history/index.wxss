@@ -1,2 +1,17 @@
 /* pages/history/index.wxss */
 @import "../../template/search.wxss";
+.del-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.del-con text:nth-of-type(1){
+  color: #333;
+  font-size: 32rpx!important;
+  flex: 1;
+
+}
+.del-con text:nth-of-type(2){
+  color: red;
+}
